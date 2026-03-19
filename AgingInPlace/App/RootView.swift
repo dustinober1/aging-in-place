@@ -38,7 +38,7 @@ private struct RoleSelectionView: View {
                     Text("I am the senior")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
-                        .frame(minHeight: Accessibility.minTouchTarget)
+                        .frame(minHeight: A11y.minTouchTarget)
                 }
                 .buttonStyle(.borderedProminent)
 
@@ -48,7 +48,7 @@ private struct RoleSelectionView: View {
                     Text("I am a caregiver")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
-                        .frame(minHeight: Accessibility.minTouchTarget)
+                        .frame(minHeight: A11y.minTouchTarget)
                 }
                 .buttonStyle(.bordered)
             }
