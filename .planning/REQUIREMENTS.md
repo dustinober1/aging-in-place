@@ -71,7 +71,7 @@
 ### Calendar
 
 - [x] **CALR-01**: Caregiver or senior can create appointments (doctor visits, PT, etc.) on a shared calendar
-- [ ] **CALR-02**: Shared calendar is visible to all permitted care team members
+- [x] **CALR-02**: Shared calendar is visible to all permitted care team members
 - [x] **CALR-03**: Appointment reminders are sent as local notifications to relevant care team members
 
 ## v2 Requirements
@@ -153,7 +153,7 @@
 | WTCH-04 | Phase 4 | Pending |
 | WTCH-05 | Phase 4 | Pending |
 | CALR-01 | Phase 2 | Complete |
-| CALR-02 | Phase 2 | Pending |
+| CALR-02 | Phase 2 | Complete |
 | CALR-03 | Phase 2 | Complete |
 
 **Coverage:**

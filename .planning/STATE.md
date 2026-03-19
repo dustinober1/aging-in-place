@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-single-device-ux-02-02-PLAN.md
-last_updated: "2026-03-19T13:09:07.922Z"
+stopped_at: Completed 02-single-device-ux-02-03-PLAN.md
+last_updated: "2026-03-19T13:10:55.347Z"
 last_activity: 2026-03-18 — Roadmap created, 45 v1 requirements mapped across 6 phases
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 7
+  completed_plans: 9
   percent: 0
 ---
 
@@ -57,6 +57,8 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P05 | 30min | 2 tasks | 1 files |
 | Phase 02-single-device-ux PP01 | 20min | 2 tasks | 14 files |
 | Phase 02-single-device-ux P02 | 5min | 1 tasks | 5 files |
+| Phase 02-single-device-ux P04 | 7min | 1 tasks | 4 files |
+| Phase 02-single-device-ux P03 | 6min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -87,6 +89,11 @@ Recent decisions affecting current work:
 - [Phase 02-single-device-ux]: MoodLog authorType stored as authorTypeRaw String with computed property — SwiftData cannot directly persist custom Codable enums without a transformer
 - [Phase 02-single-device-ux]: MedPayload struct duplicated in LogMedicationView and HistoryRow — stable wire format, duplication preferable to cross-view coupling
 - [Phase 02-single-device-ux]: Permission pre-prompt shown after schedule save — prevents data loss if user dismisses permission sheet
+- [Phase 02-single-device-ux]: Notification scheduling in AddEventView uses Task fire-and-forget — event record persisted even if notification scheduling fails
+- [Phase 02-single-device-ux]: createdByMemberID uses placeholder UUID() in AddEventView — real memberID from AppStorage deferred to onboarding integration
+- [Phase 02-single-device-ux]: LogCareVisitView uses private CareVisitPayload Codable struct for encrypting 4 visit fields — keeps PHI boundary explicit and testable
+- [Phase 02-single-device-ux]: LogMoodView reads seniorName from AppStorage for caregiver-observed title — avoids SwiftData query in modal sheet
+- [Phase 02-single-device-ux]: MoodPickerView uses Unicode emoji in Text views directly — SF Symbols lack mood-face analogs; emoji renders consistently on iOS 17+
 
 ### Pending Todos
 
@@ -100,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T13:09:07.915Z
-Stopped at: Completed 02-single-device-ux-02-02-PLAN.md
+Last session: 2026-03-19T13:10:55.345Z
+Stopped at: Completed 02-single-device-ux-02-03-PLAN.md
 Resume file: None
