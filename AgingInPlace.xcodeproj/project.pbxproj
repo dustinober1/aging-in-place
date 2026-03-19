@@ -49,6 +49,8 @@
 		B70EEC7421B2714775B90A4E /* CareVisitLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C239B6D7FC32FC4154505C /* CareVisitLog.swift */; };
 		BC4C1AE68AC251B285D567E1 /* LogMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0176CDCA45F5F5FE1E8AD90 /* LogMoodView.swift */; };
 		BF7C8D2600968896E6E06768 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F7B86B935EAD0D67A9312 /* AddEventView.swift */; };
+		C1D2E3F4A5B6C7D8E9F0A1B2 /* CareHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E4F5A6B7C8D9E0F1A2B3C4 /* CareHistoryView.swift */; };
+		C5D6E7F8A9B0C1D2E3F4A5B6 /* CareHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8F9A0B1C2D3E4F5A6B7C8 /* CareHistoryRow.swift */; };
 		C3946E5C6AE1AC7A46DD0625 /* MedicationLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77065D992D2715C448AFCE27 /* MedicationLog.swift */; };
 		C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */; };
 		C4BA2FA5D6774894A4CEB9B7 /* EmergencyContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EE93E944079DA0653E71E /* EmergencyContactFormView.swift */; };
@@ -118,6 +120,8 @@
 		811EDBE9F062F3CEBBC1608B /* MedicationSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationSchedule.swift; sourceTree = "<group>"; };
 		817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCardView.swift; sourceTree = "<group>"; };
 		854F7B86B935EAD0D67A9312 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		D3E4F5A6B7C8D9E0F1A2B3C4 /* CareHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryView.swift; sourceTree = "<group>"; };
+		D7E8F9A0B1C2D3E4F5A6B7C8 /* CareHistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryRow.swift; sourceTree = "<group>"; };
 		8E9DB8BFF1674A7DD05C9C6C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		96CF56CF72A95A4A12D54216 /* AgingInPlaceSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgingInPlaceSchemaV1.swift; sourceTree = "<group>"; };
 		9EF1FB28CD22A1E1CE12283B /* AgingInPlaceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AgingInPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,10 +318,20 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		F1A2B3C4D5E6F7A8B9C0D1E2 /* CareHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D3E4F5A6B7C8D9E0F1A2B3C4 /* CareHistoryView.swift */,
+				D7E8F9A0B1C2D3E4F5A6B7C8 /* CareHistoryRow.swift */,
+			);
+			path = CareHistory;
+			sourceTree = "<group>";
+		};
 		D5A085ECE92A659B445BDC15 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				6B5461D8B1DE1EB8E696A6D4 /* Calendar */,
+				F1A2B3C4D5E6F7A8B9C0D1E2 /* CareHistory */,
 				E9DE98F2F631B9EC58204C70 /* CaregiverHome */,
 				2136DDA6BF0C2A9ACB8B65BE /* CareTeam */,
 				C26D928866942A5298708600 /* CareVisit */,
@@ -474,6 +488,8 @@
 				4ADDC4EF3CFAEACF70E8CEFD /* CalendarEvent.swift in Sources */,
 				F0BAC6F96596A6470F87BB1B /* CareCalendarView.swift in Sources */,
 				AC022A47CEFD9D2679708B39 /* CareCircle.swift in Sources */,
+				C1D2E3F4A5B6C7D8E9F0A1B2 /* CareHistoryView.swift in Sources */,
+				C5D6E7F8A9B0C1D2E3F4A5B6 /* CareHistoryRow.swift in Sources */,
 				B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */,
 				B19F4208B27CC031A4318687 /* CareTeamListView.swift in Sources */,
 				4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */,
