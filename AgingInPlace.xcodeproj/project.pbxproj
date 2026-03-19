@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		2F25A45CB9B570544992A972 /* AgingInPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5FE50C29E67C27975DC /* AgingInPlaceApp.swift */; };
+		34A40A82B7589CC53FDB95BB /* CaregiverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2EC922046998207E94938 /* CaregiverHomeView.swift */; };
+		36A98DA23EA93CDC11B53B99 /* SeniorHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB51BADF86811BFC27F647 /* SeniorHomeView.swift */; };
 		45E4DFD586E13B2CE4B83F7F /* LWWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74CCCE875C97E0B1292BC53 /* LWWTests.swift */; };
 		4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035822946F1854A5D6B2356 /* CareTeamMember.swift */; };
+		5293690223D371776FA8A869 /* EmergencyContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */; };
 		5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DB8BFF1674A7DD05C9C6C /* RootView.swift */; };
+		5F26AFA3958C2CB0CBCC57E3 /* InviteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC361A2161923207B056649B /* InviteFlowTests.swift */; };
 		6451766CA15180E93D62EF97 /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421468401283329728812CF5 /* EncryptionTests.swift */; };
+		6C1E3F36088183CCFDE4A907 /* PermissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */; };
+		6E059A8EFBB75066143FFF4D /* InviteCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097D836BEC9A41AE040435C /* InviteCodeTests.swift */; };
 		879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA916767A4DBE98FC3067 /* InviteCode.swift */; };
 		8F6D43B49E63B9AEEC8CD6D9 /* LWWResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */; };
 		AC022A47CEFD9D2679708B39 /* CareCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA963BC78C10FB91321A29B /* CareCircle.swift */; };
 		B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */; };
 		B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86E21940EAFB9711837B10 /* KeychainService.swift */; };
 		C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */; };
+		C4BA2FA5D6774894A4CEB9B7 /* EmergencyContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EE93E944079DA0653E71E /* EmergencyContactFormView.swift */; };
 		CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */; };
 		D780DB97D08E8FD96166991C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD509FECF0C9994605B87B54 /* PersistenceTests.swift */; };
 		D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */; };
+		EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */; };
 		EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */; };
 		F62393B6A1753D46A65D17D3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F287C462D684DE54EBC136 /* Accessibility.swift */; };
 /* End PBXBuildFile section */
@@ -37,25 +45,33 @@
 
 /* Begin PBXFileReference section */
 		2BA963BC78C10FB91321A29B /* CareCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareCircle.swift; sourceTree = "<group>"; };
+		2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTests.swift; sourceTree = "<group>"; };
 		421468401283329728812CF5 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCategory.swift; sourceTree = "<group>"; };
+		4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactListView.swift; sourceTree = "<group>"; };
 		515E23EECB8C9AB02ED71B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52F287C462D684DE54EBC136 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWResolver.swift; sourceTree = "<group>"; };
+		6DB2EC922046998207E94938 /* CaregiverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiverHomeView.swift; sourceTree = "<group>"; };
 		74349F8183E35EF5465C6467 /* AgingInPlace.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AgingInPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DEA916767A4DBE98FC3067 /* InviteCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCode.swift; sourceTree = "<group>"; };
 		8028D5FE50C29E67C27975DC /* AgingInPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgingInPlaceApp.swift; sourceTree = "<group>"; };
+		80DB51BADF86811BFC27F647 /* SeniorHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorHomeView.swift; sourceTree = "<group>"; };
+		817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCardView.swift; sourceTree = "<group>"; };
 		8E9DB8BFF1674A7DD05C9C6C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9EF1FB28CD22A1E1CE12283B /* AgingInPlaceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AgingInPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareRecord.swift; sourceTree = "<group>"; };
+		BF7EE93E944079DA0653E71E /* EmergencyContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactFormView.swift; sourceTree = "<group>"; };
 		BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRole.swift; sourceTree = "<group>"; };
 		C74CCCE875C97E0B1292BC53 /* LWWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWTests.swift; sourceTree = "<group>"; };
 		CD509FECF0C9994605B87B54 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		CF86E21940EAFB9711837B10 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
+		E097D836BEC9A41AE040435C /* InviteCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeTests.swift; sourceTree = "<group>"; };
 		EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		F035822946F1854A5D6B2356 /* CareTeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamMember.swift; sourceTree = "<group>"; };
 		F89071F2EA98D68EDE81D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC361A2161923207B056649B /* InviteFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFlowTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -84,6 +100,8 @@
 		1C1FB21AAAA5FA36E8878011 /* SeniorHome */ = {
 			isa = PBXGroup;
 			children = (
+				80DB51BADF86811BFC27F647 /* SeniorHomeView.swift */,
+				817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */,
 			);
 			path = SeniorHome;
 			sourceTree = "<group>";
@@ -100,7 +118,10 @@
 			children = (
 				421468401283329728812CF5 /* EncryptionTests.swift */,
 				F89071F2EA98D68EDE81D955 /* Info.plist */,
+				E097D836BEC9A41AE040435C /* InviteCodeTests.swift */,
+				FC361A2161923207B056649B /* InviteFlowTests.swift */,
 				C74CCCE875C97E0B1292BC53 /* LWWTests.swift */,
+				2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */,
 				CD509FECF0C9994605B87B54 /* PersistenceTests.swift */,
 			);
 			path = AgingInPlaceTests;
@@ -152,6 +173,7 @@
 			children = (
 				E9DE98F2F631B9EC58204C70 /* CaregiverHome */,
 				2136DDA6BF0C2A9ACB8B65BE /* CareTeam */,
+				E9FEB54638162DC341BC31F4 /* EmergencyContacts */,
 				1C1FB21AAAA5FA36E8878011 /* SeniorHome */,
 			);
 			path = Features;
@@ -160,8 +182,18 @@
 		E9DE98F2F631B9EC58204C70 /* CaregiverHome */ = {
 			isa = PBXGroup;
 			children = (
+				6DB2EC922046998207E94938 /* CaregiverHomeView.swift */,
 			);
 			path = CaregiverHome;
+			sourceTree = "<group>";
+		};
+		E9FEB54638162DC341BC31F4 /* EmergencyContacts */ = {
+			isa = PBXGroup;
+			children = (
+				BF7EE93E944079DA0653E71E /* EmergencyContactFormView.swift */,
+				4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */,
+			);
+			path = EmergencyContacts;
 			sourceTree = "<group>";
 		};
 		EBA8B8F581D0902ACAE90B85 /* Encryption */ = {
@@ -252,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6451766CA15180E93D62EF97 /* EncryptionTests.swift in Sources */,
+				6E059A8EFBB75066143FFF4D /* InviteCodeTests.swift in Sources */,
+				5F26AFA3958C2CB0CBCC57E3 /* InviteFlowTests.swift in Sources */,
 				45E4DFD586E13B2CE4B83F7F /* LWWTests.swift in Sources */,
+				6C1E3F36088183CCFDE4A907 /* PermissionTests.swift in Sources */,
 				D780DB97D08E8FD96166991C /* PersistenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +301,10 @@
 				AC022A47CEFD9D2679708B39 /* CareCircle.swift in Sources */,
 				B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */,
 				4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */,
+				34A40A82B7589CC53FDB95BB /* CaregiverHomeView.swift in Sources */,
 				CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */,
+				C4BA2FA5D6774894A4CEB9B7 /* EmergencyContactFormView.swift in Sources */,
+				5293690223D371776FA8A869 /* EmergencyContactListView.swift in Sources */,
 				EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */,
 				879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */,
 				B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */,
@@ -274,6 +312,8 @@
 				D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */,
 				C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */,
 				5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */,
+				36A98DA23EA93CDC11B53B99 /* SeniorHomeView.swift in Sources */,
+				EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

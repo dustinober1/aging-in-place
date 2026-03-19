@@ -6,11 +6,9 @@ struct RootView: View {
     var body: some View {
         Group {
             if userRole == "senior" {
-                Text("Senior Home")
-                    .font(.largeTitle)
+                SeniorHomeView()
             } else if userRole == "caregiver" {
-                Text("Caregiver Home")
-                    .font(.largeTitle)
+                CaregiverHomeView()
             } else {
                 RoleSelectionView(userRole: $userRole)
             }
