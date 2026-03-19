@@ -12,7 +12,7 @@ The architecture has hard sequential dependencies that determine phase order: th
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Data model, care team identity, per-record encryption, SwiftData persistence, and senior UI as a first-class design constraint
+- [x] **Phase 1: Foundation** - Data model, care team identity, per-record encryption, SwiftData persistence, and senior UI as a first-class design constraint (completed 2026-03-19)
 - [ ] **Phase 2: Single-Device UX** - Full senior and caregiver interfaces, medication scheduling, care documentation, mood logging, and shared calendar — all offline-capable on one device
 - [ ] **Phase 3: P2P Sync** - Network framework sync engine with LWW merge, actor-isolated SyncCoordinator, and encrypted payloads syncing care logs across devices on the same local network
 - [ ] **Phase 4: Apple Watch Companion** - watchOS app for medication confirmation and mood quick-log, WatchConnectivity bridge, HealthKit vitals forwarding, and Watch complication
@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A care record written on one device is readable after the app is force-quit and relaunched (explicit SwiftData save confirmed working)
   4. The senior-facing home screen renders at Dynamic Type XXL+ with all touch targets at minimum 44pt and passes WCAG AAA contrast check
   5. Encryption key rotation is triggered on permission revocation — new records use the rotated key and revoked members cannot decrypt them
-**Plans:** 4/5 plans executed
+**Plans:** 5/5 plans complete
 
 Plans:
 - [ ] 01-01-PLAN.md — Xcode project setup, SwiftData models, encryption/keychain services, and foundational unit tests
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 4/5 | In Progress|  |
+| 1. Foundation | 5/5 | Complete   | 2026-03-19 |
 | 2. Single-Device UX | 0/TBD | Not started | - |
 | 3. P2P Sync | 0/TBD | Not started | - |
 | 4. Apple Watch Companion | 0/TBD | Not started | - |
