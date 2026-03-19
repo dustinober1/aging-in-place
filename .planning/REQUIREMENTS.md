@@ -11,9 +11,9 @@
 - [ ] **TEAM-02**: Invited caregiver can accept invitation and join the care circle
 - [ ] **TEAM-03**: Senior can view all current care team members and their roles
 - [ ] **TEAM-04**: Senior can remove a care team member from the circle
-- [ ] **TEAM-05**: Senior can grant per-category access permissions to each care team member (e.g., medications yes, mood logs no)
-- [ ] **TEAM-06**: Senior can revoke a permission category from a care team member at any time
-- [ ] **TEAM-07**: Permission revocation prevents future access to newly created records in that category
+- [x] **TEAM-05**: Senior can grant per-category access permissions to each care team member (e.g., medications yes, mood logs no)
+- [x] **TEAM-06**: Senior can revoke a permission category from a care team member at any time
+- [x] **TEAM-07**: Permission revocation prevents future access to newly created records in that category
 - [x] **TEAM-08**: Caregiver can view a shared care team overview showing recent activity across all members
 - [x] **TEAM-09**: Senior or caregiver can store and access emergency contacts and medical ID information
 
@@ -114,9 +114,9 @@
 | TEAM-02 | Phase 1 | Pending |
 | TEAM-03 | Phase 1 | Pending |
 | TEAM-04 | Phase 1 | Pending |
-| TEAM-05 | Phase 1 | Pending |
-| TEAM-06 | Phase 1 | Pending |
-| TEAM-07 | Phase 1 | Pending |
+| TEAM-05 | Phase 1 | Complete |
+| TEAM-06 | Phase 1 | Complete |
+| TEAM-07 | Phase 1 | Complete |
 | TEAM-08 | Phase 1 | Complete |
 | TEAM-09 | Phase 1 | Complete |
 | MEDS-01 | Phase 2 | Pending |
