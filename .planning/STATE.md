@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-single-device-ux-02-01-PLAN.md
-last_updated: "2026-03-19T12:58:35.340Z"
+stopped_at: Completed 02-single-device-ux-02-02-PLAN.md
+last_updated: "2026-03-19T13:09:07.922Z"
 last_activity: 2026-03-18 — Roadmap created, 45 v1 requirements mapped across 6 phases
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 6
+  completed_plans: 7
   percent: 0
 ---
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P02 | 10min | 2 tasks | 9 files |
 | Phase 01-foundation P05 | 30min | 2 tasks | 1 files |
 | Phase 02-single-device-ux PP01 | 20min | 2 tasks | 14 files |
+| Phase 02-single-device-ux P02 | 5min | 1 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,8 @@ Recent decisions affecting current work:
 - [Phase 02-single-device-ux]: modelContainer Scene modifier lacks migrationPlan parameter on iOS 17+ — construct ModelContainer manually with Schema + migrationPlan init, pass via .modelContainer(container:)
 - [Phase 02-single-device-ux]: nonisolated(unsafe) required for VersionedSchema versionIdentifier static vars under Swift 6 strict concurrency
 - [Phase 02-single-device-ux]: MoodLog authorType stored as authorTypeRaw String with computed property — SwiftData cannot directly persist custom Codable enums without a transformer
+- [Phase 02-single-device-ux]: MedPayload struct duplicated in LogMedicationView and HistoryRow — stable wire format, duplication preferable to cross-view coupling
+- [Phase 02-single-device-ux]: Permission pre-prompt shown after schedule save — prevents data loss if user dismisses permission sheet
 
 ### Pending Todos
 
@@ -97,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T12:58:35.338Z
-Stopped at: Completed 02-single-device-ux-02-01-PLAN.md
+Last session: 2026-03-19T13:09:07.915Z
+Stopped at: Completed 02-single-device-ux-02-02-PLAN.md
 Resume file: None

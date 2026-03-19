@@ -50,7 +50,7 @@ Plans:
   3. Caregiver can log a care visit with structured fields (meals, mobility, observations, concerns), and the entry appears in the care history browsable by category, date, and author
   4. Senior can self-report mood and caregiver can log observed mood; both entries appear in the care history with distinct authorship
   5. Caregiver can create a shared appointment, view it on the care calendar, and receive a local notification reminder before the appointment
-**Plans:** 1/5 plans executed
+**Plans:** 2/5 plans executed
 
 Plans:
 - [ ] 02-01-PLAN.md — VersionedSchema migration, Phase 2 SwiftData models, NotificationService, and entitlements
@@ -108,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-03-19 |
-| 2. Single-Device UX | 1/5 | In Progress|  |
+| 2. Single-Device UX | 2/5 | In Progress|  |
 | 3. P2P Sync | 0/TBD | Not started | - |
 | 4. Apple Watch Companion | 0/TBD | Not started | - |
 | 5. HealthKit Integration | 0/TBD | Not started | - |

@@ -22,7 +22,7 @@
 - [x] **MEDS-01**: Caregiver or senior can log a medication administration (drug name, dose, time, who administered)
 - [x] **MEDS-02**: Caregiver or senior can set up a recurring medication schedule with local push notification reminders
 - [ ] **MEDS-03**: Senior can confirm medication taken via Apple Watch with 2 taps
-- [ ] **MEDS-04**: Caregiver can view medication history showing all administrations with timestamps and who logged them
+- [x] **MEDS-04**: Caregiver can view medication history showing all administrations with timestamps and who logged them
 - [x] **MEDS-05**: Caregiver receives notification if a scheduled medication is not confirmed within a configurable window
 
 ### Care Documentation
@@ -122,7 +122,7 @@
 | MEDS-01 | Phase 2 | Complete |
 | MEDS-02 | Phase 2 | Complete |
 | MEDS-03 | Phase 4 | Pending |
-| MEDS-04 | Phase 2 | Pending |
+| MEDS-04 | Phase 2 | Complete |
 | MEDS-05 | Phase 2 | Complete |
 | CARE-01 | Phase 2 | Complete |
 | CARE-02 | Phase 2 | Complete |
