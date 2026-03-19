@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-05-PLAN.md
-last_updated: "2026-03-19T04:18:55.260Z"
+stopped_at: Completed 02-single-device-ux-02-01-PLAN.md
+last_updated: "2026-03-19T12:58:35.340Z"
 last_activity: 2026-03-18 — Roadmap created, 45 v1 requirements mapped across 6 phases
 progress:
   total_phases: 6
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 10
+  completed_plans: 6
   percent: 0
 ---
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P03 | 8 | 2 tasks | 3 files |
 | Phase 01-foundation P02 | 10min | 2 tasks | 9 files |
 | Phase 01-foundation P05 | 30min | 2 tasks | 1 files |
+| Phase 02-single-device-ux PP01 | 20min | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: CareTeamListView NavigationLink targets placeholder Text until MemberDetailView from Plan 03 is wired in Plan 05 integration
 - [Phase 01-foundation]: Card navigation uses NavigationLink at root NavigationStack level — avoids nested NavigationStack conflict on iOS
 - [Phase 01-foundation]: CareTeamListView embeddedMode parameter suppresses internal NavigationStack when reused inside parent stack
+- [Phase 02-single-device-ux]: modelContainer Scene modifier lacks migrationPlan parameter on iOS 17+ — construct ModelContainer manually with Schema + migrationPlan init, pass via .modelContainer(container:)
+- [Phase 02-single-device-ux]: nonisolated(unsafe) required for VersionedSchema versionIdentifier static vars under Swift 6 strict concurrency
+- [Phase 02-single-device-ux]: MoodLog authorType stored as authorTypeRaw String with computed property — SwiftData cannot directly persist custom Codable enums without a transformer
 
 ### Pending Todos
 
@@ -93,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T03:03:26.916Z
-Stopped at: Completed 01-foundation-01-05-PLAN.md
+Last session: 2026-03-19T12:58:35.338Z
+Stopped at: Completed 02-single-device-ux-02-01-PLAN.md
 Resume file: None
