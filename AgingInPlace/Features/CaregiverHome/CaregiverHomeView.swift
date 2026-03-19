@@ -104,26 +104,45 @@ struct CaregiverHomeView: View {
                 .accessibilityAddTraits(.isHeader)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                QuickActionButton(
-                    title: "Log Medication",
-                    systemImage: "pills.fill",
-                    action: {}
-                )
-                QuickActionButton(
-                    title: "Record Mood",
-                    systemImage: "heart.fill",
-                    action: {}
-                )
-                QuickActionButton(
-                    title: "Add Visit Note",
-                    systemImage: "note.text.badge.plus",
-                    action: {}
-                )
-                QuickActionButton(
-                    title: "View Calendar",
-                    systemImage: "calendar",
-                    action: {}
-                )
+                NavigationLink(destination: LogMedicationView(schedule: nil)) {
+                    QuickActionLabel(
+                        title: "Log Dose",
+                        systemImage: "pills.fill"
+                    )
+                }
+                .buttonStyle(.plain)
+
+                NavigationLink(destination: LogCareVisitView()) {
+                    QuickActionLabel(
+                        title: "Log Visit",
+                        systemImage: "stethoscope"
+                    )
+                }
+                .buttonStyle(.plain)
+
+                NavigationLink(destination: LogMoodView(authorType: .caregiver)) {
+                    QuickActionLabel(
+                        title: "Log Mood",
+                        systemImage: "heart.fill"
+                    )
+                }
+                .buttonStyle(.plain)
+
+                NavigationLink(destination: AddEventView()) {
+                    QuickActionLabel(
+                        title: "Add Appointment",
+                        systemImage: "calendar.badge.plus"
+                    )
+                }
+                .buttonStyle(.plain)
+
+                NavigationLink(destination: CareHistoryView()) {
+                    QuickActionLabel(
+                        title: "Care History",
+                        systemImage: "clock.arrow.circlepath"
+                    )
+                }
+                .buttonStyle(.plain)
             }
         }
     }
@@ -183,36 +202,39 @@ private struct ActivityRow: View {
     }
 }
 
-// MARK: - Quick Action Button
+// MARK: - Quick Action Label
 
-private struct QuickActionButton: View {
+private struct QuickActionLabel: View {
     let title: String
     let systemImage: String
-    let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 8) {
-                Image(systemName: systemImage)
-                    .font(.title2)
-                    .foregroundStyle(Color.accentColor)
-                Text(title)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(Color.primary)
-            }
-            .frame(maxWidth: .infinity)
-            .frame(minHeight: A11y.minTouchTarget)
-            .padding(.vertical, 16)
-            .background(Color(uiColor: .secondarySystemBackground))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+        VStack(spacing: 8) {
+            Image(systemName: systemImage)
+                .font(.title2)
+                .foregroundStyle(Color.accentColor)
+            Text(title)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(Color.primary)
         }
+        .frame(maxWidth: .infinity)
+        .frame(minHeight: A11y.minTouchTarget)
+        .padding(.vertical, 16)
+        .background(Color(uiColor: .secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         .accessibilityLabel(title)
     }
 }
 
 #Preview {
-    CaregiverHomeView()
-        .modelContainer(for: [CareRecord.self, CareTeamMember.self, EmergencyContact.self], inMemory: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(
+        for: Schema(AgingInPlaceSchemaV2.models),
+        migrationPlan: AgingInPlaceMigrationPlan.self,
+        configurations: [config]
+    )
+    return CaregiverHomeView()
+        .modelContainer(container)
 }

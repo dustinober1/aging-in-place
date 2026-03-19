@@ -3,6 +3,12 @@ import SwiftData
 
 struct SeniorHomeView: View {
     @Query private var circles: [CareCircle]
+    @Query(sort: \MedicationLog.administeredAt, order: .reverse)
+    private var recentMedLogs: [MedicationLog]
+    @Query(sort: \MoodLog.loggedAt, order: .reverse)
+    private var recentMoodLogs: [MoodLog]
+    @Query(sort: \CalendarEvent.eventDate, order: .forward)
+    private var upcomingEvents: [CalendarEvent]
 
     private var seniorName: String {
         circles.first?.seniorName ?? "there"
@@ -10,6 +16,45 @@ struct SeniorHomeView: View {
 
     private var memberCount: Int {
         circles.first?.members.count ?? 0
+    }
+
+    // MARK: - Computed summaries
+
+    private var medicationSummary: String {
+        let today = Calendar.current.startOfDay(for: Date())
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today) ?? today
+        let todayLogs = recentMedLogs.filter { $0.administeredAt >= today && $0.administeredAt < tomorrow }
+        if todayLogs.isEmpty {
+            return "No medications today"
+        }
+        return "\(todayLogs.count) dose\(todayLogs.count == 1 ? "" : "s") logged today"
+    }
+
+    private var moodSummary: String {
+        let today = Calendar.current.startOfDay(for: Date())
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today) ?? today
+        let todayMoods = recentMoodLogs.filter { $0.loggedAt >= today && $0.loggedAt < tomorrow }
+        if let latest = todayMoods.first {
+            let emoji: String
+            switch latest.moodValue {
+            case 1: emoji = "😞"
+            case 2: emoji = "😕"
+            case 3: emoji = "😐"
+            case 4: emoji = "🙂"
+            case 5: emoji = "😄"
+            default: emoji = "😐"
+            }
+            return "\(emoji) Mood: \(latest.moodValue)/5"
+        }
+        return "Not recorded today"
+    }
+
+    private var calendarSummary: String {
+        let now = Date()
+        if let next = upcomingEvents.first(where: { $0.eventDate >= now }) {
+            return next.title
+        }
+        return "No upcoming appointments"
     }
 
     var body: some View {
@@ -55,19 +100,19 @@ struct SeniorHomeView: View {
 
     private var cardList: some View {
         VStack(spacing: 16) {
-            NavigationLink(destination: PlaceholderDetailView(title: "Medications")) {
+            NavigationLink(destination: MedicationListView()) {
                 SummaryCardContent(
                     title: "Medications",
-                    summary: "No medications yet",
+                    summary: medicationSummary,
                     systemImage: "pills.fill"
                 )
             }
             .buttonStyle(.plain)
 
-            NavigationLink(destination: PlaceholderDetailView(title: "Mood")) {
+            NavigationLink(destination: LogMoodView(authorType: .senior)) {
                 SummaryCardContent(
                     title: "Mood",
-                    summary: "Not recorded today",
+                    summary: moodSummary,
                     systemImage: "heart.fill"
                 )
             }
@@ -82,11 +127,20 @@ struct SeniorHomeView: View {
             }
             .buttonStyle(.plain)
 
-            NavigationLink(destination: PlaceholderDetailView(title: "Calendar")) {
+            NavigationLink(destination: CareCalendarView()) {
                 SummaryCardContent(
                     title: "Calendar",
-                    summary: "No upcoming appointments",
+                    summary: calendarSummary,
                     systemImage: "calendar"
+                )
+            }
+            .buttonStyle(.plain)
+
+            NavigationLink(destination: CareHistoryView()) {
+                SummaryCardContent(
+                    title: "Care History",
+                    summary: "Browse all care records",
+                    systemImage: "clock.arrow.circlepath"
                 )
             }
             .buttonStyle(.plain)
@@ -112,21 +166,13 @@ struct SeniorHomeView: View {
     }
 }
 
-/// Placeholder destination view for Phase 2 features.
-struct PlaceholderDetailView: View {
-    let title: String
-
-    var body: some View {
-        ContentUnavailableView(
-            title,
-            systemImage: "clock",
-            description: Text("This feature is coming soon.")
-        )
-        .navigationTitle(title)
-    }
-}
-
 #Preview {
-    SeniorHomeView()
-        .modelContainer(for: [CareCircle.self, EmergencyContact.self], inMemory: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(
+        for: Schema(AgingInPlaceSchemaV2.models),
+        migrationPlan: AgingInPlaceMigrationPlan.self,
+        configurations: [config]
+    )
+    return SeniorHomeView()
+        .modelContainer(container)
 }
