@@ -30,8 +30,8 @@
 - [x] **CARE-01**: Caregiver can log a care visit with structured fields (meals, mobility, observations, concerns)
 - [x] **CARE-02**: Senior can self-report mood on a simple scale (e.g., 1-5 or emoji)
 - [x] **CARE-03**: Caregiver can log observed mood for the senior during a visit
-- [ ] **CARE-04**: User can browse full care history with filtering by category, date range, and author
-- [ ] **CARE-05**: User can search care logs by keyword
+- [x] **CARE-04**: User can browse full care history with filtering by category, date range, and author
+- [x] **CARE-05**: User can search care logs by keyword
 
 ### Health Monitoring
 
@@ -127,8 +127,8 @@
 | CARE-01 | Phase 2 | Complete |
 | CARE-02 | Phase 2 | Complete |
 | CARE-03 | Phase 2 | Complete |
-| CARE-04 | Phase 2 | Pending |
-| CARE-05 | Phase 2 | Pending |
+| CARE-04 | Phase 2 | Complete |
+| CARE-05 | Phase 2 | Complete |
 | HLTH-01 | Phase 5 | Pending |
 | HLTH-02 | Phase 5 | Pending |
 | HLTH-03 | Phase 5 | Pending |

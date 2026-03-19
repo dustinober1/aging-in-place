@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-single-device-ux-02-03-PLAN.md
-last_updated: "2026-03-19T13:10:55.347Z"
+stopped_at: Completed 02-05-PLAN.md
+last_updated: "2026-03-19T13:23:18.175Z"
 last_activity: 2026-03-18 — Roadmap created, 45 v1 requirements mapped across 6 phases
 progress:
   total_phases: 6
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
   percent: 0
 ---
 
@@ -59,6 +59,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-single-device-ux P02 | 5min | 1 tasks | 5 files |
 | Phase 02-single-device-ux P04 | 7min | 1 tasks | 4 files |
 | Phase 02-single-device-ux P03 | 6min | 2 tasks | 7 files |
+| Phase 02-single-device-ux P05 | 9min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -94,6 +95,8 @@ Recent decisions affecting current work:
 - [Phase 02-single-device-ux]: LogCareVisitView uses private CareVisitPayload Codable struct for encrypting 4 visit fields — keeps PHI boundary explicit and testable
 - [Phase 02-single-device-ux]: LogMoodView reads seniorName from AppStorage for caregiver-observed title — avoids SwiftData query in modal sheet
 - [Phase 02-single-device-ux]: MoodPickerView uses Unicode emoji in Text views directly — SF Symbols lack mood-face analogs; emoji renders consistently on iOS 17+
+- [Phase 02-single-device-ux]: In-memory keyword search on decrypted CareHistoryEntry summaries — SwiftData full-text search on encrypted fields is not feasible; per 02-RESEARCH.md recommendation
+- [Phase 02-single-device-ux]: CareHistoryEntry is a value-type struct (not @Model) — timeline recomputed from live @Query results each render; no additional SwiftData entity needed
 
 ### Pending Todos
 
@@ -107,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T13:10:55.345Z
-Stopped at: Completed 02-single-device-ux-02-03-PLAN.md
+Last session: 2026-03-19T13:23:18.173Z
+Stopped at: Completed 02-05-PLAN.md
 Resume file: None
