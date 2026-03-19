@@ -56,33 +56,40 @@ struct SeniorHomeView: View {
     private var cardList: some View {
         VStack(spacing: 16) {
             NavigationLink(destination: PlaceholderDetailView(title: "Medications")) {
-                EmptyView()
+                SummaryCardContent(
+                    title: "Medications",
+                    summary: "No medications yet",
+                    systemImage: "pills.fill"
+                )
             }
-            .hidden()
+            .buttonStyle(.plain)
 
-            SummaryCardView(
-                title: "Medications",
-                summary: "No medications yet",
-                systemImage: "pills.fill"
-            ) {}
+            NavigationLink(destination: PlaceholderDetailView(title: "Mood")) {
+                SummaryCardContent(
+                    title: "Mood",
+                    summary: "Not recorded today",
+                    systemImage: "heart.fill"
+                )
+            }
+            .buttonStyle(.plain)
 
-            SummaryCardView(
-                title: "Mood",
-                summary: "Not recorded today",
-                systemImage: "heart.fill"
-            ) {}
+            NavigationLink(destination: CareTeamListView(embedded: true)) {
+                SummaryCardContent(
+                    title: "Care Team",
+                    summary: memberCount == 0 ? "No members yet" : "\(memberCount) member\(memberCount == 1 ? "" : "s")",
+                    systemImage: "person.3.fill"
+                )
+            }
+            .buttonStyle(.plain)
 
-            SummaryCardView(
-                title: "Care Team",
-                summary: memberCount == 0 ? "No members yet" : "\(memberCount) member\(memberCount == 1 ? "" : "s")",
-                systemImage: "person.3.fill"
-            ) {}
-
-            SummaryCardView(
-                title: "Calendar",
-                summary: "No upcoming appointments",
-                systemImage: "calendar"
-            ) {}
+            NavigationLink(destination: PlaceholderDetailView(title: "Calendar")) {
+                SummaryCardContent(
+                    title: "Calendar",
+                    summary: "No upcoming appointments",
+                    systemImage: "calendar"
+                )
+            }
+            .buttonStyle(.plain)
         }
     }
 

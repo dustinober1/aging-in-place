@@ -3,6 +3,9 @@ import SwiftData
 
 /// Senior-facing care team list with role labels, invite, and swipe-to-delete with confirmation.
 struct CareTeamListView: View {
+    /// When true, skips the inner NavigationStack (used when pushed inside another NavigationStack).
+    var embedded: Bool = false
+
     @Environment(\.modelContext) private var context
     @Query private var members: [CareTeamMember]
 
@@ -11,44 +14,52 @@ struct CareTeamListView: View {
     @State private var showDeleteConfirmation = false
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if members.isEmpty {
-                    emptyStateView
-                } else {
-                    memberListView
+        if embedded {
+            content
+        } else {
+            NavigationStack {
+                content
+            }
+        }
+    }
+
+    private var content: some View {
+        Group {
+            if members.isEmpty {
+                emptyStateView
+            } else {
+                memberListView
+            }
+        }
+        .navigationTitle("Care Team")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    showInviteFlow = true
+                } label: {
+                    Label("Invite Caregiver", systemImage: "person.badge.plus")
+                }
+                .frame(minHeight: A11y.minTouchTarget)
+            }
+        }
+        .sheet(isPresented: $showInviteFlow) {
+            InviteFlowView()
+        }
+        .confirmationDialog(
+            deleteDialogTitle,
+            isPresented: $showDeleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Remove Member", role: .destructive) {
+                if let member = memberToDelete {
+                    removeMember(member)
                 }
             }
-            .navigationTitle("Care Team")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        showInviteFlow = true
-                    } label: {
-                        Label("Invite Caregiver", systemImage: "person.badge.plus")
-                    }
-                    .frame(minHeight: A11y.minTouchTarget)
-                }
+            Button("Cancel", role: .cancel) {
+                memberToDelete = nil
             }
-            .sheet(isPresented: $showInviteFlow) {
-                InviteFlowView()
-            }
-            .confirmationDialog(
-                deleteDialogTitle,
-                isPresented: $showDeleteConfirmation,
-                titleVisibility: .visible
-            ) {
-                Button("Remove Member", role: .destructive) {
-                    if let member = memberToDelete {
-                        removeMember(member)
-                    }
-                }
-                Button("Cancel", role: .cancel) {
-                    memberToDelete = nil
-                }
-            } message: {
-                Text("This member will be removed from your care team. You can re-invite them later.")
-            }
+        } message: {
+            Text("This member will be removed from your care team. You can re-invite them later.")
         }
     }
 
