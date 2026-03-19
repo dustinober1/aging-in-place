@@ -27,6 +27,7 @@ targets:
         DEVELOPMENT_TEAM: ""
         CODE_SIGN_STYLE: Automatic
         INFOPLIST_FILE: AgingInPlace/Info.plist
+        CODE_SIGN_ENTITLEMENTS: AgingInPlace/AgingInPlace.entitlements
     info:
       path: AgingInPlace/Info.plist
       properties:
