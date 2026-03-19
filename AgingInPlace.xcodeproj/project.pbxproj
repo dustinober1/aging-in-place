@@ -13,9 +13,11 @@
 		879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA916767A4DBE98FC3067 /* InviteCode.swift */; };
 		AC022A47CEFD9D2679708B39 /* CareCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA963BC78C10FB91321A29B /* CareCircle.swift */; };
 		B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */; };
+		B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86E21940EAFB9711837B10 /* KeychainService.swift */; };
 		C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */; };
 		CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */; };
 		D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */; };
+		EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */; };
 		F62393B6A1753D46A65D17D3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F287C462D684DE54EBC136 /* Accessibility.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		9EF1FB28CD22A1E1CE12283B /* AgingInPlaceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AgingInPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareRecord.swift; sourceTree = "<group>"; };
 		BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRole.swift; sourceTree = "<group>"; };
+		CF86E21940EAFB9711837B10 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
 		EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		F035822946F1854A5D6B2356 /* CareTeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamMember.swift; sourceTree = "<group>"; };
 		F89071F2EA98D68EDE81D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		EBA8B8F581D0902ACAE90B85 /* Encryption */ = {
 			isa = PBXGroup;
 			children = (
+				D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */,
+				CF86E21940EAFB9711837B10 /* KeychainService.swift */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 				B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */,
 				4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */,
 				CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */,
+				EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */,
 				879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */,
+				B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */,
 				D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */,
 				C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */,
 				5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */,
