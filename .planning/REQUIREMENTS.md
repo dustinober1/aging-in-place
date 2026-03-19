@@ -7,10 +7,10 @@
 
 ### Care Team
 
-- [ ] **TEAM-01**: Senior or proxy can invite new care team members via shareable code or link
-- [ ] **TEAM-02**: Invited caregiver can accept invitation and join the care circle
-- [ ] **TEAM-03**: Senior can view all current care team members and their roles
-- [ ] **TEAM-04**: Senior can remove a care team member from the circle
+- [x] **TEAM-01**: Senior or proxy can invite new care team members via shareable code or link
+- [x] **TEAM-02**: Invited caregiver can accept invitation and join the care circle
+- [x] **TEAM-03**: Senior can view all current care team members and their roles
+- [x] **TEAM-04**: Senior can remove a care team member from the circle
 - [x] **TEAM-05**: Senior can grant per-category access permissions to each care team member (e.g., medications yes, mood logs no)
 - [x] **TEAM-06**: Senior can revoke a permission category from a care team member at any time
 - [x] **TEAM-07**: Permission revocation prevents future access to newly created records in that category
@@ -110,10 +110,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| TEAM-01 | Phase 1 | Pending |
-| TEAM-02 | Phase 1 | Pending |
-| TEAM-03 | Phase 1 | Pending |
-| TEAM-04 | Phase 1 | Pending |
+| TEAM-01 | Phase 1 | Complete |
+| TEAM-02 | Phase 1 | Complete |
+| TEAM-03 | Phase 1 | Complete |
+| TEAM-04 | Phase 1 | Complete |
 | TEAM-05 | Phase 1 | Complete |
 | TEAM-06 | Phase 1 | Complete |
 | TEAM-07 | Phase 1 | Complete |

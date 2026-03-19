@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A care record written on one device is readable after the app is force-quit and relaunched (explicit SwiftData save confirmed working)
   4. The senior-facing home screen renders at Dynamic Type XXL+ with all touch targets at minimum 44pt and passes WCAG AAA contrast check
   5. Encryption key rotation is triggered on permission revocation — new records use the rotated key and revoked members cannot decrypt them
-**Plans:** 3/5 plans executed
+**Plans:** 4/5 plans executed
 
 Plans:
 - [ ] 01-01-PLAN.md — Xcode project setup, SwiftData models, encryption/keychain services, and foundational unit tests
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/5 | In Progress|  |
+| 1. Foundation | 4/5 | In Progress|  |
 | 2. Single-Device UX | 0/TBD | Not started | - |
 | 3. P2P Sync | 0/TBD | Not started | - |
 | 4. Apple Watch Companion | 0/TBD | Not started | - |
