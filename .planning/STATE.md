@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-01-PLAN.md
-last_updated: "2026-03-19T02:17:50.446Z"
+stopped_at: Completed 01-foundation-01-04-PLAN.md
+last_updated: "2026-03-19T02:26:56.105Z"
 last_activity: 2026-03-18 — Roadmap created, 45 v1 requirements mapped across 6 phases
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 5
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 7 | 3 tasks | 18 files |
+| Phase 01-foundation P04 | 12 | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: AES-GCM combined format stored as Data in CareRecord.encryptedPayload — no plaintext PHI in SwiftData
 - [Phase 01-foundation]: Keychain service tag com.agingInPlace.carekeys with kSecAttrAccessibleAfterFirstUnlock
 - [Phase 01-foundation]: LWWResolver tiebreak uses UUID string lexicographic order — deterministic without server clock
+- [Phase 01-foundation]: greetingForTimeOfDay exposed as internal method for unit-test access — no ModelContainer needed
+- [Phase 01-foundation]: CaregiverHomeView filters records client-side via Set<PermissionCategory>.contains — avoids SwiftData predicate with UUID join
 
 ### Pending Todos
 
@@ -81,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T02:17:50.444Z
-Stopped at: Completed 01-foundation-01-01-PLAN.md
+Last session: 2026-03-19T02:26:56.103Z
+Stopped at: Completed 01-foundation-01-04-PLAN.md
 Resume file: None

@@ -14,8 +14,8 @@
 - [ ] **TEAM-05**: Senior can grant per-category access permissions to each care team member (e.g., medications yes, mood logs no)
 - [ ] **TEAM-06**: Senior can revoke a permission category from a care team member at any time
 - [ ] **TEAM-07**: Permission revocation prevents future access to newly created records in that category
-- [ ] **TEAM-08**: Caregiver can view a shared care team overview showing recent activity across all members
-- [ ] **TEAM-09**: Senior or caregiver can store and access emergency contacts and medical ID information
+- [x] **TEAM-08**: Caregiver can view a shared care team overview showing recent activity across all members
+- [x] **TEAM-09**: Senior or caregiver can store and access emergency contacts and medical ID information
 
 ### Medication
 
@@ -55,10 +55,10 @@
 
 ### User Experience
 
-- [ ] **SENR-01**: Senior-facing UI uses Dynamic Type XXL+ with minimum 44pt touch targets
-- [ ] **SENR-02**: Senior-facing UI uses high-contrast colors meeting WCAG AAA standards
-- [ ] **SENR-03**: Senior-facing UI has minimal navigation depth (max 2 taps to any primary action)
-- [ ] **SENR-04**: Senior can view their own care log, vitals, and upcoming medications on a single home screen
+- [x] **SENR-01**: Senior-facing UI uses Dynamic Type XXL+ with minimum 44pt touch targets
+- [x] **SENR-02**: Senior-facing UI uses high-contrast colors meeting WCAG AAA standards
+- [x] **SENR-03**: Senior-facing UI has minimal navigation depth (max 2 taps to any primary action)
+- [x] **SENR-04**: Senior can view their own care log, vitals, and upcoming medications on a single home screen
 
 ### Apple Watch
 
@@ -117,8 +117,8 @@
 | TEAM-05 | Phase 1 | Pending |
 | TEAM-06 | Phase 1 | Pending |
 | TEAM-07 | Phase 1 | Pending |
-| TEAM-08 | Phase 1 | Pending |
-| TEAM-09 | Phase 1 | Pending |
+| TEAM-08 | Phase 1 | Complete |
+| TEAM-09 | Phase 1 | Complete |
 | MEDS-01 | Phase 2 | Pending |
 | MEDS-02 | Phase 2 | Pending |
 | MEDS-03 | Phase 4 | Pending |
@@ -143,10 +143,10 @@
 | SYNC-06 | Phase 6 | Pending |
 | SYNC-07 | Phase 6 | Pending |
 | SYNC-08 | Phase 1 | Complete |
-| SENR-01 | Phase 1 | Pending |
-| SENR-02 | Phase 1 | Pending |
-| SENR-03 | Phase 1 | Pending |
-| SENR-04 | Phase 1 | Pending |
+| SENR-01 | Phase 1 | Complete |
+| SENR-02 | Phase 1 | Complete |
+| SENR-03 | Phase 1 | Complete |
+| SENR-04 | Phase 1 | Complete |
 | WTCH-01 | Phase 4 | Pending |
 | WTCH-02 | Phase 4 | Pending |
 | WTCH-03 | Phase 4 | Pending |
