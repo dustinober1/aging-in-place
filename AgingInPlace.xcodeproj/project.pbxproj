@@ -17,6 +17,7 @@
 		45E4DFD586E13B2CE4B83F7F /* LWWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74CCCE875C97E0B1292BC53 /* LWWTests.swift */; };
 		463F581E65451F33BCFFEBC5 /* MedicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D965AC808C23FC0399887 /* MedicationTests.swift */; };
 		4666C8755AE550556B4D789C /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2E2A60A4BA62EE45EDDB8 /* CalendarTests.swift */; };
+		A1B2C3D4E5F60718293A4B5C /* CareHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C7D8E9F0A1B2C3D4E5F607 /* CareHistoryTests.swift */; };
 		482C9302D92B3F851871AD7E /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C49F834435713A8286556 /* MoodPickerView.swift */; };
 		4ADDC4EF3CFAEACF70E8CEFD /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF034BEE39F650B7C09EE89 /* CalendarEvent.swift */; };
 		4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035822946F1854A5D6B2356 /* CareTeamMember.swift */; };
@@ -90,6 +91,7 @@
 		208D8F669B4216254C61245F /* LogCareVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCareVisitView.swift; sourceTree = "<group>"; };
 		2151463B0626126A11E5BB30 /* MedicationScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationScheduleView.swift; sourceTree = "<group>"; };
 		27C2E2A60A4BA62EE45EDDB8 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
+		B6C7D8E9F0A1B2C3D4E5F607 /* CareHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryTests.swift; sourceTree = "<group>"; };
 		2BA963BC78C10FB91321A29B /* CareCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareCircle.swift; sourceTree = "<group>"; };
 		2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTests.swift; sourceTree = "<group>"; };
 		332EBBB2BABB96A7DFC64F29 /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				27C2E2A60A4BA62EE45EDDB8 /* CalendarTests.swift */,
+				B6C7D8E9F0A1B2C3D4E5F607 /* CareHistoryTests.swift */,
 				C475901F66337781327364C8 /* CaregiverHomeTests.swift */,
 				AD4EB3F56A161DCF8A5D4794 /* CareTeamTests.swift */,
 				BF28CEE835492E812FB18745 /* CareVisitTests.swift */,
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4666C8755AE550556B4D789C /* CalendarTests.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5C /* CareHistoryTests.swift in Sources */,
 				95BD54AEFEE9E64F9090773E /* CareTeamTests.swift in Sources */,
 				6A74BF80C10E996AABF71680 /* CareVisitTests.swift in Sources */,
 				9C983FBE139512F108777361 /* CaregiverHomeTests.swift in Sources */,
