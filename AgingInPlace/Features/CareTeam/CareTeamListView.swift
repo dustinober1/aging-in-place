@@ -58,10 +58,7 @@ struct CareTeamListView: View {
         List {
             ForEach(members) { member in
                 NavigationLink {
-                    // Placeholder — MemberDetailView is created in Plan 03.
-                    // Will be replaced with MemberDetailView(member: member) during Plan 05 integration.
-                    Text("Member Detail")
-                        .navigationTitle(member.displayName)
+                    MemberDetailView(member: member)
                 } label: {
                     memberRow(member)
                 }
