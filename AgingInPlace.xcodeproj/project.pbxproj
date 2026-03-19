@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2F25A45CB9B570544992A972 /* AgingInPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5FE50C29E67C27975DC /* AgingInPlaceApp.swift */; };
+		45E4DFD586E13B2CE4B83F7F /* LWWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74CCCE875C97E0B1292BC53 /* LWWTests.swift */; };
 		4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035822946F1854A5D6B2356 /* CareTeamMember.swift */; };
 		5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DB8BFF1674A7DD05C9C6C /* RootView.swift */; };
+		6451766CA15180E93D62EF97 /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421468401283329728812CF5 /* EncryptionTests.swift */; };
 		879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA916767A4DBE98FC3067 /* InviteCode.swift */; };
+		8F6D43B49E63B9AEEC8CD6D9 /* LWWResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */; };
 		AC022A47CEFD9D2679708B39 /* CareCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA963BC78C10FB91321A29B /* CareCircle.swift */; };
 		B5471B0CE0AB03B1935BBAAC /* CareRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */; };
 		B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86E21940EAFB9711837B10 /* KeychainService.swift */; };
 		C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */; };
 		CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */; };
+		D780DB97D08E8FD96166991C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD509FECF0C9994605B87B54 /* PersistenceTests.swift */; };
 		D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */; };
 		EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */; };
 		F62393B6A1753D46A65D17D3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F287C462D684DE54EBC136 /* Accessibility.swift */; };
@@ -33,9 +37,11 @@
 
 /* Begin PBXFileReference section */
 		2BA963BC78C10FB91321A29B /* CareCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareCircle.swift; sourceTree = "<group>"; };
+		421468401283329728812CF5 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCategory.swift; sourceTree = "<group>"; };
 		515E23EECB8C9AB02ED71B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52F287C462D684DE54EBC136 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
+		5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWResolver.swift; sourceTree = "<group>"; };
 		74349F8183E35EF5465C6467 /* AgingInPlace.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AgingInPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DEA916767A4DBE98FC3067 /* InviteCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCode.swift; sourceTree = "<group>"; };
 		8028D5FE50C29E67C27975DC /* AgingInPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgingInPlaceApp.swift; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 		9EF1FB28CD22A1E1CE12283B /* AgingInPlaceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AgingInPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB4DBB8FB708663AAB0963 /* CareRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareRecord.swift; sourceTree = "<group>"; };
 		BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRole.swift; sourceTree = "<group>"; };
+		C74CCCE875C97E0B1292BC53 /* LWWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWTests.swift; sourceTree = "<group>"; };
+		CD509FECF0C9994605B87B54 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		CF86E21940EAFB9711837B10 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
 		EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
@@ -90,7 +98,10 @@
 		2689D2D382E720DA13781132 /* AgingInPlaceTests */ = {
 			isa = PBXGroup;
 			children = (
+				421468401283329728812CF5 /* EncryptionTests.swift */,
 				F89071F2EA98D68EDE81D955 /* Info.plist */,
+				C74CCCE875C97E0B1292BC53 /* LWWTests.swift */,
+				CD509FECF0C9994605B87B54 /* PersistenceTests.swift */,
 			);
 			path = AgingInPlaceTests;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 				F035822946F1854A5D6B2356 /* CareTeamMember.swift */,
 				EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */,
 				75DEA916767A4DBE98FC3067 /* InviteCode.swift */,
+				5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */,
 				BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */,
 				4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */,
 			);
@@ -239,6 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6451766CA15180E93D62EF97 /* EncryptionTests.swift in Sources */,
+				45E4DFD586E13B2CE4B83F7F /* LWWTests.swift in Sources */,
+				D780DB97D08E8FD96166991C /* PersistenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +270,7 @@
 				EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */,
 				879F068516D513CA2B4D0AD7 /* InviteCode.swift in Sources */,
 				B641DAC10EDC155761FBCD10 /* KeychainService.swift in Sources */,
+				8F6D43B49E63B9AEEC8CD6D9 /* LWWResolver.swift in Sources */,
 				D969C5300C93680BF859DE7F /* MemberRole.swift in Sources */,
 				C4A5CAFC338F6C47283F95FF /* PermissionCategory.swift in Sources */,
 				5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */,
