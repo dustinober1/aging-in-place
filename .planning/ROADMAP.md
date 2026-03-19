@@ -31,7 +31,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A care record written on one device is readable after the app is force-quit and relaunched (explicit SwiftData save confirmed working)
   4. The senior-facing home screen renders at Dynamic Type XXL+ with all touch targets at minimum 44pt and passes WCAG AAA contrast check
   5. Encryption key rotation is triggered on permission revocation — new records use the rotated key and revoked members cannot decrypt them
-**Plans**: TBD
+**Plans:** 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Xcode project setup, SwiftData models, encryption/keychain services, and foundational unit tests
+- [ ] 01-02-PLAN.md — Care team invite/join flow, team list, and member removal
+- [ ] 01-03-PLAN.md — Per-category permission management with key rotation
+- [ ] 01-04-PLAN.md — Senior and caregiver home screens, emergency contacts, role-based navigation
+- [ ] 01-05-PLAN.md — Integration test suite and visual verification checkpoint
 
 ### Phase 2: Single-Device UX
 **Goal**: A solo user (either senior or caregiver) can complete every primary care workflow — medication logging, visit notes, mood logging, care history browsing, and shared calendar — entirely offline on a single device
@@ -93,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/5 | Planning complete | - |
 | 2. Single-Device UX | 0/TBD | Not started | - |
 | 3. P2P Sync | 0/TBD | Not started | - |
 | 4. Apple Watch Companion | 0/TBD | Not started | - |
