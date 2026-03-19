@@ -168,6 +168,12 @@ private struct CareVisitPayload: Codable {
 }
 
 #Preview {
-    LogCareVisitView()
-        .modelContainer(for: Schema(AgingInPlaceSchemaV2.models), inMemory: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(
+        for: Schema(AgingInPlaceSchemaV2.models),
+        migrationPlan: AgingInPlaceMigrationPlan.self,
+        configurations: [config]
+    )
+    return LogCareVisitView()
+        .modelContainer(container)
 }
