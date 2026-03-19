@@ -44,14 +44,14 @@
 
 ### Sync & Privacy
 
-- [ ] **SYNC-01**: All data reads and writes work fully offline on a single device
+- [x] **SYNC-01**: All data reads and writes work fully offline on a single device
 - [ ] **SYNC-02**: Devices discover and sync care logs over local network via Network framework when in proximity
-- [ ] **SYNC-03**: Sync resolves concurrent edits using CRDT/LWW merge strategy without data loss
-- [ ] **SYNC-04**: Each care record is encrypted with per-record keys via CryptoKit
-- [ ] **SYNC-05**: Permission revocation rotates encryption keys so revoked members cannot decrypt new records
+- [x] **SYNC-03**: Sync resolves concurrent edits using CRDT/LWW merge strategy without data loss
+- [x] **SYNC-04**: Each care record is encrypted with per-record keys via CryptoKit
+- [x] **SYNC-05**: Permission revocation rotates encryption keys so revoked members cannot decrypt new records
 - [ ] **SYNC-06**: Senior can opt in to encrypted iCloud relay for remote caregiver sync
 - [ ] **SYNC-07**: Remote caregivers receive synced care logs via CloudKit when relay is enabled
-- [ ] **SYNC-08**: No PHI is stored unencrypted on any Apple server
+- [x] **SYNC-08**: No PHI is stored unencrypted on any Apple server
 
 ### User Experience
 
@@ -135,14 +135,14 @@
 | HLTH-04 | Phase 5 | Pending |
 | HLTH-05 | Phase 5 | Pending |
 | HLTH-06 | Phase 5 | Pending |
-| SYNC-01 | Phase 1 | Pending |
+| SYNC-01 | Phase 1 | Complete |
 | SYNC-02 | Phase 3 | Pending |
-| SYNC-03 | Phase 3 | Pending |
-| SYNC-04 | Phase 1 | Pending |
-| SYNC-05 | Phase 1 | Pending |
+| SYNC-03 | Phase 3 | Complete |
+| SYNC-04 | Phase 1 | Complete |
+| SYNC-05 | Phase 1 | Complete |
 | SYNC-06 | Phase 6 | Pending |
 | SYNC-07 | Phase 6 | Pending |
-| SYNC-08 | Phase 1 | Pending |
+| SYNC-08 | Phase 1 | Complete |
 | SENR-01 | Phase 1 | Pending |
 | SENR-02 | Phase 1 | Pending |
 | SENR-03 | Phase 1 | Pending |
