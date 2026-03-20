@@ -50,14 +50,15 @@ Plans:
   3. Caregiver can log a care visit with structured fields (meals, mobility, observations, concerns), and the entry appears in the care history browsable by category, date, and author
   4. Senior can self-report mood and caregiver can log observed mood; both entries appear in the care history with distinct authorship
   5. Caregiver can create a shared appointment, view it on the care calendar, and receive a local notification reminder before the appointment
-**Plans:** 4/5 plans executed
+**Plans:** 6 plans (5 executed + 1 gap closure)
 
 Plans:
-- [ ] 02-01-PLAN.md — VersionedSchema migration, Phase 2 SwiftData models, NotificationService, and entitlements
-- [ ] 02-02-PLAN.md — Medication logging, schedule creation, history, and missed-dose alerting
-- [ ] 02-03-PLAN.md — Care visit logging and mood logging with encrypted storage
-- [ ] 02-04-PLAN.md — Shared care calendar with appointment reminders
-- [ ] 02-05-PLAN.md — Unified care history with filtering/search and home screen wiring
+- [x] 02-01-PLAN.md — VersionedSchema migration, Phase 2 SwiftData models, NotificationService, and entitlements
+- [x] 02-02-PLAN.md — Medication logging, schedule creation, history, and missed-dose alerting
+- [x] 02-03-PLAN.md — Care visit logging and mood logging with encrypted storage
+- [x] 02-04-PLAN.md — Shared care calendar with appointment reminders
+- [x] 02-05-PLAN.md — Unified care history with filtering/search and home screen wiring
+- [ ] 02-06-PLAN.md — Gap closure: wire author filter into CareHistoryView (CARE-04)
 
 ### Phase 3: P2P Sync
 **Goal**: Two or more iOS devices on the same local network automatically discover each other and sync care logs without any manual pairing — all care entries written offline appear on peer devices the next time they are in proximity
@@ -108,7 +109,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-03-19 |
-| 2. Single-Device UX | 4/5 | In Progress|  |
+| 2. Single-Device UX | 5/6 | In Progress|  |
 | 3. P2P Sync | 0/TBD | Not started | - |
 | 4. Apple Watch Companion | 0/TBD | Not started | - |
 | 5. HealthKit Integration | 0/TBD | Not started | - |
