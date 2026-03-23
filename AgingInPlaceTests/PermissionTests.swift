@@ -8,7 +8,7 @@ final class PermissionTests: XCTestCase {
     var context: ModelContext!
 
     override func setUpWithError() throws {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         container = try ModelContainer(
             for: CareCircle.self, CareTeamMember.self,
             configurations: config

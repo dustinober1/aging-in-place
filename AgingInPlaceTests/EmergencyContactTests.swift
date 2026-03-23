@@ -8,7 +8,7 @@ final class EmergencyContactTests: XCTestCase {
 
     @MainActor
     override func setUp() async throws {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         container = try ModelContainer(for: EmergencyContact.self, configurations: config)
         context = container.mainContext
     }

@@ -62,6 +62,7 @@ struct SeniorHomeView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     greetingHeader
+                    SyncStatusBanner()
                     cardList
                 }
                 .padding(.horizontal, 16)
@@ -167,9 +168,9 @@ struct SeniorHomeView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     let container = try! ModelContainer(
-        for: Schema(AgingInPlaceSchemaV2.models),
+        for: Schema(AgingInPlaceSchemaV3.models),
         migrationPlan: AgingInPlaceMigrationPlan.self,
         configurations: [config]
     )

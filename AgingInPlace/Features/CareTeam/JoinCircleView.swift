@@ -1,7 +1,6 @@
 import SwiftUI
 import SwiftData
 
-/// Caregiver-facing join screen — enter an invite code and select a role to request joining.
 struct JoinCircleView: View {
     @Environment(\.modelContext) private var context
     @Query private var circles: [CareCircle]
@@ -12,6 +11,7 @@ struct JoinCircleView: View {
     @State private var isLoading = false
     @State private var errorMessage: String? = nil
     @State private var didJoin = false
+    @State private var iCloudAvailable = true
 
     private var circle: CareCircle? { circles.first }
 
@@ -23,13 +23,35 @@ struct JoinCircleView: View {
                 formView
             }
         }
+        .task {
+            let status = await CloudKitAvailability.checkAccountStatus()
+            iCloudAvailable = (status == .available)
+        }
     }
 
     // MARK: - Form
 
     private var formView: some View {
         Form {
-            Section("Invite Code") {
+            if iCloudAvailable {
+                Section {
+                    VStack(spacing: 8) {
+                        Image(systemName: "link.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(Color.accentColor)
+                        Text("Open the invite link sent by your senior to join their care circle automatically.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                } header: {
+                    Text("Join via Link")
+                }
+            }
+
+            Section(iCloudAvailable ? "Or Enter Code Manually" : "Invite Code") {
                 TextField("CARE-XXXX-XXXX", text: $enteredCode)
                     .font(.system(.body, design: .monospaced))
                     .autocorrectionDisabled()
@@ -108,7 +130,6 @@ struct JoinCircleView: View {
         isLoading = true
         errorMessage = nil
 
-        // Look up invite code in SwiftData
         let trimmedCode = enteredCode.trimmingCharacters(in: .whitespaces)
         let fetchDesc = FetchDescriptor<InviteCode>(predicate: #Predicate { $0.code == trimmedCode })
 
@@ -133,8 +154,11 @@ struct JoinCircleView: View {
                 return
             }
 
-            // Create pending member and mark code used
-            let member = CareTeamMember(displayName: displayName.trimmingCharacters(in: .whitespaces), role: selectedRole, circle: circle)
+            let member = CareTeamMember(
+                displayName: displayName.trimmingCharacters(in: .whitespaces),
+                role: selectedRole,
+                circle: circle
+            )
             circle.members.append(member)
             context.insert(member)
             invite.isUsed = true
@@ -150,7 +174,7 @@ struct JoinCircleView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     let container = try! ModelContainer(
         for: CareCircle.self, CareTeamMember.self, CareRecord.self,
         InviteCode.self, EmergencyContact.self,

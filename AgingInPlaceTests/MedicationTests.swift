@@ -7,9 +7,9 @@ final class MedicationTests: XCTestCase {
     // MARK: - Container helper
 
     private func makeContainer() throws -> ModelContainer {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         return try ModelContainer(
-            for: Schema(AgingInPlaceSchemaV2.models),
+            for: Schema(AgingInPlaceSchemaV3.models),
             migrationPlan: AgingInPlaceMigrationPlan.self,
             configurations: [config]
         )
