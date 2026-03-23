@@ -11,8 +11,15 @@ struct LogMedicationView: View {
     /// Optional schedule — when provided, pre-fills fields and links scheduleID.
     let schedule: MedicationSchedule?
 
-    /// Current user member ID — read from AppStorage (set during onboarding).
-    @AppStorage("caregiverMemberID") private var memberIDString: String = ""
+    @Query private var profiles: [UserProfile]
+    @Query private var allMembers: [CareTeamMember]
+
+    private var currentMemberID: UUID {
+        guard let profile = profiles.first,
+              let member = allMembers.first(where: { $0.iCloudRecordID == profile.iCloudRecordID })
+        else { return UUID() }
+        return member.id
+    }
 
     @State private var drugName: String
     @State private var dose: String
@@ -84,12 +91,7 @@ struct LogMedicationView: View {
     // MARK: - Save
 
     private func saveDose() {
-        let authorMemberID: UUID
-        if let id = UUID(uuidString: memberIDString) {
-            authorMemberID = id
-        } else {
-            authorMemberID = UUID()
-        }
+        let authorMemberID = currentMemberID
 
         do {
             // JSON-encode the payload

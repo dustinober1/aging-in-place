@@ -8,8 +8,17 @@ struct MedicationScheduleView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
 
-    @AppStorage("caregiverMemberID") private var memberIDString: String = ""
     @AppStorage("notificationPermissionRequested") private var permissionRequested: Bool = false
+
+    @Query private var profiles: [UserProfile]
+    @Query private var allMembers: [CareTeamMember]
+
+    private var currentMemberID: UUID {
+        guard let profile = profiles.first,
+              let member = allMembers.first(where: { $0.iCloudRecordID == profile.iCloudRecordID })
+        else { return UUID() }
+        return member.id
+    }
 
     @State private var drugName: String = ""
     @State private var dose: String = ""
@@ -91,12 +100,7 @@ struct MedicationScheduleView: View {
     // MARK: - Save
 
     private func saveSchedule() {
-        let authorMemberID: UUID
-        if let id = UUID(uuidString: memberIDString) {
-            authorMemberID = id
-        } else {
-            authorMemberID = UUID()
-        }
+        let authorMemberID = currentMemberID
 
         let components = Calendar.current.dateComponents([.hour, .minute], from: selectedTime)
         let hour = components.hour ?? 8

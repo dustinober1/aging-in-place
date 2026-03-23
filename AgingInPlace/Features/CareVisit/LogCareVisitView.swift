@@ -5,7 +5,15 @@ struct LogCareVisitView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
 
-    @AppStorage("caregiverMemberID") private var caregiverMemberIDString: String = ""
+    @Query private var profiles: [UserProfile]
+    @Query private var allMembers: [CareTeamMember]
+
+    private var currentMemberID: UUID {
+        guard let profile = profiles.first,
+              let member = allMembers.first(where: { $0.iCloudRecordID == profile.iCloudRecordID })
+        else { return UUID() }
+        return member.id
+    }
 
     @State private var visitDate: Date = Date()
     @State private var meals: String = ""
@@ -23,7 +31,7 @@ struct LogCareVisitView: View {
     }
 
     private var authorMemberID: UUID {
-        UUID(uuidString: caregiverMemberIDString) ?? UUID()
+        currentMemberID
     }
 
     var body: some View {

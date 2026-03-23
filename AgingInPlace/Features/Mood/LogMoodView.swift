@@ -7,9 +7,17 @@ struct LogMoodView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
 
-    @AppStorage("caregiverMemberID") private var caregiverMemberIDString: String = ""
-    @AppStorage("seniorMemberID") private var seniorMemberIDString: String = ""
     @AppStorage("seniorName") private var seniorName: String = "them"
+
+    @Query private var profiles: [UserProfile]
+    @Query private var allMembers: [CareTeamMember]
+
+    private var currentMemberID: UUID {
+        guard let profile = profiles.first,
+              let member = allMembers.first(where: { $0.iCloudRecordID == profile.iCloudRecordID })
+        else { return UUID() }
+        return member.id
+    }
 
     @State private var selectedMood: Int = 3
     @State private var notes: String = ""
@@ -17,12 +25,7 @@ struct LogMoodView: View {
     @State private var errorMessage: String?
 
     private var authorMemberID: UUID {
-        switch authorType {
-        case .senior:
-            return UUID(uuidString: seniorMemberIDString) ?? UUID()
-        case .caregiver:
-            return UUID(uuidString: caregiverMemberIDString) ?? UUID()
-        }
+        currentMemberID
     }
 
     private var navigationTitle: String {
