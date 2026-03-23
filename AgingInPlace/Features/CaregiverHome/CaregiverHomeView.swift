@@ -2,10 +2,18 @@ import SwiftUI
 import SwiftData
 
 struct CaregiverHomeView: View {
-    /// In a real app this would come from the logged-in caregiver's profile.
-    /// For Phase 1 we read from AppStorage (set during onboarding in Plan 02).
-    @AppStorage("caregiverName") private var caregiverName: String = "Caregiver"
-    @AppStorage("caregiverMemberID") private var caregiverMemberIDString: String = ""
+    @Query private var profiles: [UserProfile]
+
+    private var caregiverName: String {
+        profiles.first?.displayName ?? "Caregiver"
+    }
+
+    private var currentMemberID: UUID? {
+        guard let profile = profiles.first,
+              let member = members.first(where: { $0.iCloudRecordID == profile.iCloudRecordID })
+        else { return nil }
+        return member.id
+    }
 
     @Query(sort: \CareRecord.lastModified, order: .reverse)
     private var allRecords: [CareRecord]
@@ -14,7 +22,7 @@ struct CaregiverHomeView: View {
 
     /// The current caregiver's granted categories, derived from their CareTeamMember record.
     private var grantedCategories: Set<PermissionCategory> {
-        guard let memberID = UUID(uuidString: caregiverMemberIDString),
+        guard let memberID = currentMemberID,
               let member = members.first(where: { $0.id == memberID })
         else {
             // No member record yet — default to all categories granted
