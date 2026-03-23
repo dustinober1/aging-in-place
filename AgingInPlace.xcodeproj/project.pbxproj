@@ -25,6 +25,7 @@
 		482C9302D92B3F851871AD7E /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C49F834435713A8286556 /* MoodPickerView.swift */; };
 		4ADDC4EF3CFAEACF70E8CEFD /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF034BEE39F650B7C09EE89 /* CalendarEvent.swift */; };
 		4EC504DE41DF143C28698F3E /* CareTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035822946F1854A5D6B2356 /* CareTeamMember.swift */; };
+		50C7B6D836EA408F63A4D226 /* iCloudIdentityServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43894ADC20DD0E6566D98CE9 /* iCloudIdentityServiceTests.swift */; };
 		5293690223D371776FA8A869 /* EmergencyContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */; };
 		55153919E4AFD09C6BA5EEDA /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EBBB2BABB96A7DFC64F29 /* MemberDetailView.swift */; };
 		5845EA856F6ECA4D1B081AFE /* CloudSharingControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571485BFC11CCB70A59025A7 /* CloudSharingControllerRepresentable.swift */; };
@@ -77,6 +78,7 @@
 		EA45141FE059FC37DE79BE7F /* LogCareVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D8F669B4216254C61245F /* LogCareVisitView.swift */; };
 		EA49D5F90F70D0A317EAEDAE /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDC301F350A257D3D4BFA /* UserProfileTests.swift */; };
 		EB278974616F7761A5DE01B2 /* EmergencyContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176C4FDE81569FD023FECBB /* EmergencyContactTests.swift */; };
+		EC071CE8EBA464E9CDFCAB82 /* iCloudIdentityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FA0FD7485AD5A9F077F701 /* iCloudIdentityService.swift */; };
 		EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */; };
 		EE238407C6F1AAF58F7908D0 /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F3CBE3B8C460DD9A440EF /* MoodLog.swift */; };
 		EE66E923862CA1D0CC9C084A /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFB3ED3ED32DC05FAC0BD7 /* EncryptionService.swift */; };
@@ -115,9 +117,11 @@
 		2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTests.swift; sourceTree = "<group>"; };
 		332EBBB2BABB96A7DFC64F29 /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
 		378BDC301F350A257D3D4BFA /* UserProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
+		37FA0FD7485AD5A9F077F701 /* iCloudIdentityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudIdentityService.swift; sourceTree = "<group>"; };
 		3CB580D63AF58791763E6438 /* CareHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryView.swift; sourceTree = "<group>"; };
 		414D447E71CA6E122D164562 /* SharingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceTests.swift; sourceTree = "<group>"; };
 		421468401283329728812CF5 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
+		43894ADC20DD0E6566D98CE9 /* iCloudIdentityServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudIdentityServiceTests.swift; sourceTree = "<group>"; };
 		4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCategory.swift; sourceTree = "<group>"; };
 		4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactListView.swift; sourceTree = "<group>"; };
 		515E23EECB8C9AB02ED71B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 				05C90669DC8ADB4656E58269 /* CloudKitSyncMonitorTests.swift */,
 				5176C4FDE81569FD023FECBB /* EmergencyContactTests.swift */,
 				421468401283329728812CF5 /* EncryptionTests.swift */,
+				43894ADC20DD0E6566D98CE9 /* iCloudIdentityServiceTests.swift */,
 				F89071F2EA98D68EDE81D955 /* Info.plist */,
 				E097D836BEC9A41AE040435C /* InviteCodeTests.swift */,
 				FC361A2161923207B056649B /* InviteFlowTests.swift */,
@@ -284,6 +289,7 @@
 				19C9CB1DCB952F67070C8A9F /* CloudKitAvailability.swift */,
 				745186E6251D7426DC4B4697 /* CloudKitSyncMonitor.swift */,
 				571485BFC11CCB70A59025A7 /* CloudSharingControllerRepresentable.swift */,
+				37FA0FD7485AD5A9F077F701 /* iCloudIdentityService.swift */,
 				2AB176F4114F995F283384DA /* SharingService.swift */,
 				6D0103E5A1CC47C2F3EEEDDA /* SyncStatusBanner.swift */,
 			);
@@ -524,6 +530,7 @@
 				0711CDC70EB6E7B277AE15EF /* SeniorHomeTests.swift in Sources */,
 				CD69E3811CAF5D712DC75349 /* SharingServiceTests.swift in Sources */,
 				EA49D5F90F70D0A317EAEDAE /* UserProfileTests.swift in Sources */,
+				50C7B6D836EA408F63A4D226 /* iCloudIdentityServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +591,7 @@
 				EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */,
 				13D0A4E089BA85EC3647AAD1 /* SyncStatusBanner.swift in Sources */,
 				2E159277E218CEEC20E9DDFD /* UserProfile.swift in Sources */,
+				EC071CE8EBA464E9CDFCAB82 /* iCloudIdentityService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
