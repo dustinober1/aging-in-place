@@ -14,6 +14,7 @@
 		1CEB152234841D303535A526 /* CareHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8694989AF7C8C2AA5B596BE /* CareHistoryRow.swift */; };
 		1E2AEC21C9D522F586691091 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04507C1D992941B4FBE32483 /* NotificationPermissionView.swift */; };
 		209A84C6D0C6051BB8F8C8D6 /* AgingInPlaceSchemaV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25044435F8AD8C066482661 /* AgingInPlaceSchemaV3.swift */; };
+		2E159277E218CEEC20E9DDFD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E32E749974DFB6D39B099B /* UserProfile.swift */; };
 		2F25A45CB9B570544992A972 /* AgingInPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5FE50C29E67C27975DC /* AgingInPlaceApp.swift */; };
 		34A40A82B7589CC53FDB95BB /* CaregiverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2EC922046998207E94938 /* CaregiverHomeView.swift */; };
 		36A98DA23EA93CDC11B53B99 /* SeniorHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB51BADF86811BFC27F647 /* SeniorHomeView.swift */; };
@@ -74,6 +75,7 @@
 		E78EA6E5F171527C22817DB1 /* InviteCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB780CD561438E5F95A1056F /* InviteCodeGenerator.swift */; };
 		E94C042D07B0295587A3D027 /* SchemaV3MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BC85B77D674BC133B64AF /* SchemaV3MigrationTests.swift */; };
 		EA45141FE059FC37DE79BE7F /* LogCareVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D8F669B4216254C61245F /* LogCareVisitView.swift */; };
+		EA49D5F90F70D0A317EAEDAE /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDC301F350A257D3D4BFA /* UserProfileTests.swift */; };
 		EB278974616F7761A5DE01B2 /* EmergencyContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176C4FDE81569FD023FECBB /* EmergencyContactTests.swift */; };
 		EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B7A6E26CE499E0B468CA7 /* SummaryCardView.swift */; };
 		EE238407C6F1AAF58F7908D0 /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F3CBE3B8C460DD9A440EF /* MoodLog.swift */; };
@@ -112,6 +114,7 @@
 		2BA963BC78C10FB91321A29B /* CareCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareCircle.swift; sourceTree = "<group>"; };
 		2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTests.swift; sourceTree = "<group>"; };
 		332EBBB2BABB96A7DFC64F29 /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
+		378BDC301F350A257D3D4BFA /* UserProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
 		3CB580D63AF58791763E6438 /* CareHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryView.swift; sourceTree = "<group>"; };
 		414D447E71CA6E122D164562 /* SharingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceTests.swift; sourceTree = "<group>"; };
 		421468401283329728812CF5 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		5300C3B8164F2FBB0D1E6AA5 /* LWWResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWWResolver.swift; sourceTree = "<group>"; };
 		56C9B27D5CC0A984D7091CA2 /* LogMedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMedicationView.swift; sourceTree = "<group>"; };
 		571485BFC11CCB70A59025A7 /* CloudSharingControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSharingControllerRepresentable.swift; sourceTree = "<group>"; };
+		58E32E749974DFB6D39B099B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		5C4745404BD7FD786ECC4C8D /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
 		638D965AC808C23FC0399887 /* MedicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTests.swift; sourceTree = "<group>"; };
 		65FFCA2617E42F04C69EDEB9 /* PendingRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingRequestView.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				0C67DB3B20E996D9F793AE5A /* SchemaV4MigrationTests.swift */,
 				7127AEAE9EA3E088F0BEC016 /* SeniorHomeTests.swift */,
 				414D447E71CA6E122D164562 /* SharingServiceTests.swift */,
+				378BDC301F350A257D3D4BFA /* UserProfileTests.swift */,
 			);
 			path = AgingInPlaceTests;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				BFBAE621A5D7176FCE1C7E41 /* MemberRole.swift */,
 				F83F3CBE3B8C460DD9A440EF /* MoodLog.swift */,
 				4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */,
+				58E32E749974DFB6D39B099B /* UserProfile.swift */,
 				AEF2999C9BF299DFB715A88C /* Schema */,
 			);
 			path = Models;
@@ -517,6 +523,7 @@
 				C676CDB18EFBD45A80C9606D /* SchemaV4MigrationTests.swift in Sources */,
 				0711CDC70EB6E7B277AE15EF /* SeniorHomeTests.swift in Sources */,
 				CD69E3811CAF5D712DC75349 /* SharingServiceTests.swift in Sources */,
+				EA49D5F90F70D0A317EAEDAE /* UserProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +583,7 @@
 				15597890E590CB5B87C69245 /* SharingService.swift in Sources */,
 				EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */,
 				13D0A4E089BA85EC3647AAD1 /* SyncStatusBanner.swift in Sources */,
+				2E159277E218CEEC20E9DDFD /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

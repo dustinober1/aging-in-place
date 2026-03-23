@@ -16,7 +16,9 @@ enum AgingInPlaceSchemaV4: VersionedSchema {
             MedicationLog.self,
             CareVisitLog.self,
             MoodLog.self,
-            CalendarEvent.self
+            CalendarEvent.self,
+            // Phase 4 models
+            UserProfile.self
         ]
     }
 }
