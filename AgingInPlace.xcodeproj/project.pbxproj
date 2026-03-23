@@ -554,6 +554,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ICLOUD_CONTAINER_IDENTIFIER = iCloud.com.agingInPlace.app;
 				INFOPLIST_FILE = AgingInPlace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -737,6 +738,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ICLOUD_CONTAINER_IDENTIFIER = iCloud.com.agingInPlace.app;
 				INFOPLIST_FILE = AgingInPlace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
