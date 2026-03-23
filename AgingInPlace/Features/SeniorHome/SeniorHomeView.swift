@@ -15,7 +15,7 @@ struct SeniorHomeView: View {
     }
 
     private var memberCount: Int {
-        circles.first?.members.count ?? 0
+        circles.first?.members?.count ?? 0
     }
 
     // MARK: - Computed summaries
@@ -170,7 +170,7 @@ struct SeniorHomeView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     let container = try! ModelContainer(
-        for: Schema(AgingInPlaceSchemaV3.models),
+        for: Schema(AgingInPlaceSchemaV4.models),
         migrationPlan: AgingInPlaceMigrationPlan.self,
         configurations: [config]
     )

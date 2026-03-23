@@ -6,7 +6,7 @@ final class SchemaV3MigrationTests: XCTestCase {
     private func makeContainer() throws -> ModelContainer {
         let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         return try ModelContainer(
-            for: Schema(AgingInPlaceSchemaV3.models),
+            for: Schema(AgingInPlaceSchemaV4.models),
             migrationPlan: AgingInPlaceMigrationPlan.self,
             configurations: [config]
         )
@@ -26,8 +26,8 @@ final class SchemaV3MigrationTests: XCTestCase {
         context.insert(record)
         try context.save()
         let fetched = try context.fetch(FetchDescriptor<CareCircle>())
-        XCTAssertEqual(fetched.first?.careRecords.count, 1)
-        XCTAssertEqual(fetched.first?.careRecords.first?.id, record.id)
+        XCTAssertEqual(fetched.first?.careRecords?.count, 1)
+        XCTAssertEqual(fetched.first?.careRecords?.first?.id, record.id)
     }
 
     func testCareRecordCascadeDeletesWithCircle() throws {

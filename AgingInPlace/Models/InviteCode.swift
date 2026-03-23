@@ -3,10 +3,10 @@ import SwiftData
 
 @Model
 final class InviteCode {
-    var id: UUID
-    var code: String
-    var isUsed: Bool
-    var createdAt: Date
+    var id: UUID = UUID()
+    var code: String = ""
+    var isUsed: Bool = false
+    var createdAt: Date = Date()
     var circle: CareCircle?
 
     init(code: String, circle: CareCircle? = nil) {

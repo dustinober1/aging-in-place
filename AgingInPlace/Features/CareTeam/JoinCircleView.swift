@@ -159,7 +159,7 @@ struct JoinCircleView: View {
                 role: selectedRole,
                 circle: circle
             )
-            circle.members.append(member)
+            circle.members?.append(member)
             context.insert(member)
             invite.isUsed = true
             try context.save()
@@ -184,7 +184,7 @@ struct JoinCircleView: View {
     let circle = CareCircle(seniorName: "Margaret")
     let code = InviteCodeGenerator.generate()
     let invite = InviteCode(code: code, circle: circle)
-    circle.pendingInvites.append(invite)
+    circle.pendingInvites?.append(invite)
     ctx.insert(circle)
     ctx.insert(invite)
     try? ctx.save()

@@ -133,7 +133,7 @@ struct InviteFlowView: View {
 
         guard let circle else { return }
         let invite = InviteCode(code: code, circle: circle)
-        circle.pendingInvites.append(invite)
+        circle.pendingInvites?.append(invite)
         context.insert(invite)
         try? context.save()
     }

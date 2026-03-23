@@ -3,16 +3,16 @@ import SwiftData
 
 @Model
 final class CareCircle {
-    var id: UUID
-    var seniorName: String
-    var seniorDeviceID: String
+    var id: UUID = UUID()
+    var seniorName: String = ""
+    var seniorDeviceID: String = ""
     @Relationship(deleteRule: .cascade, inverse: \CareTeamMember.circle)
-    var members: [CareTeamMember]
+    var members: [CareTeamMember]?
     @Relationship(deleteRule: .cascade, inverse: \InviteCode.circle)
-    var pendingInvites: [InviteCode]
+    var pendingInvites: [InviteCode]?
     @Relationship(deleteRule: .cascade, inverse: \CareRecord.circle)
-    var careRecords: [CareRecord]
-    var lastModified: Date
+    var careRecords: [CareRecord]?
+    var lastModified: Date = Date()
 
     init(seniorName: String, seniorDeviceID: String = "") {
         self.id = UUID()

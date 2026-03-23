@@ -10,16 +10,16 @@ enum MoodAuthorType: String, Codable, CaseIterable {
 
 @Model
 final class MoodLog {
-    var id: UUID
+    var id: UUID = UUID()
     /// Integer 1–5 mood scale. Not encrypted — not PHI in isolation; needed for predicate queries.
-    var moodValue: Int
-    var authorMemberID: UUID
+    var moodValue: Int = 3
+    var authorMemberID: UUID = UUID()
     /// Stored as String so SwiftData can persist the enum value
-    var authorTypeRaw: String
+    var authorTypeRaw: String = MoodAuthorType.senior.rawValue
     /// Optional encrypted payload for free-text notes (PHI)
     var notes: Data?
-    var loggedAt: Date
-    var lastModified: Date
+    var loggedAt: Date = Date()
+    var lastModified: Date = Date()
 
     var authorType: MoodAuthorType {
         get { MoodAuthorType(rawValue: authorTypeRaw) ?? .senior }

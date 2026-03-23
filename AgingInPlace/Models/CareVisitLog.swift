@@ -3,14 +3,14 @@ import SwiftData
 
 @Model
 final class CareVisitLog {
-    var id: UUID
+    var id: UUID = UUID()
     /// AES-GCM sealed JSON: { meals, mobility, observations, concerns }
-    var encryptedPayload: Data
+    var encryptedPayload: Data = Data()
     /// Not encrypted — needed for predicate-based date filtering
-    var visitDate: Date
-    var authorMemberID: UUID
-    var createdAt: Date
-    var lastModified: Date
+    var visitDate: Date = Date()
+    var authorMemberID: UUID = UUID()
+    var createdAt: Date = Date()
+    var lastModified: Date = Date()
 
     init(
         encryptedPayload: Data,
