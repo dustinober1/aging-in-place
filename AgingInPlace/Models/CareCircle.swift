@@ -10,6 +10,8 @@ final class CareCircle {
     var members: [CareTeamMember]
     @Relationship(deleteRule: .cascade, inverse: \InviteCode.circle)
     var pendingInvites: [InviteCode]
+    @Relationship(deleteRule: .cascade, inverse: \CareRecord.circle)
+    var careRecords: [CareRecord]
     var lastModified: Date
 
     init(seniorName: String, seniorDeviceID: String = "") {
@@ -18,6 +20,7 @@ final class CareCircle {
         self.seniorDeviceID = seniorDeviceID
         self.members = []
         self.pendingInvites = []
+        self.careRecords = []
         self.lastModified = Date()
     }
 }

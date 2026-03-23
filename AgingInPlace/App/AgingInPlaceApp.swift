@@ -8,7 +8,7 @@ struct AgingInPlaceApp: App {
         do {
             let config = ModelConfiguration(isStoredInMemoryOnly: false)
             return try ModelContainer(
-                for: Schema(AgingInPlaceSchemaV2.models),
+                for: Schema(AgingInPlaceSchemaV3.models),
                 migrationPlan: AgingInPlaceMigrationPlan.self,
                 configurations: config
             )
