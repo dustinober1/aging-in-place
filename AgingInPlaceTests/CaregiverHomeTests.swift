@@ -8,7 +8,7 @@ final class CaregiverHomeTests: XCTestCase {
 
     @MainActor
     override func setUp() async throws {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         container = try ModelContainer(
             for: CareRecord.self, CareTeamMember.self, CareCircle.self,
             configurations: config

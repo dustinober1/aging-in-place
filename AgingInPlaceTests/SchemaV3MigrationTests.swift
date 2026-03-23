@@ -4,7 +4,7 @@ import SwiftData
 
 final class SchemaV3MigrationTests: XCTestCase {
     private func makeContainer() throws -> ModelContainer {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         return try ModelContainer(
             for: Schema(AgingInPlaceSchemaV3.models),
             migrationPlan: AgingInPlaceMigrationPlan.self,

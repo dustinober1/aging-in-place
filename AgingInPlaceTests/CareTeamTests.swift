@@ -8,7 +8,7 @@ final class CareTeamTests: XCTestCase {
     var circle: CareCircle!
 
     override func setUpWithError() throws {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         container = try ModelContainer(
             for: CareCircle.self, CareTeamMember.self, CareRecord.self,
             InviteCode.self, EmergencyContact.self,
