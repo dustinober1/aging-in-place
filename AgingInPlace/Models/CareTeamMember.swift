@@ -3,13 +3,14 @@ import SwiftData
 
 @Model
 final class CareTeamMember {
-    var id: UUID
-    var displayName: String
-    var role: MemberRole
-    var isProxy: Bool
-    var grantedCategories: [PermissionCategory]
-    var joinedAt: Date
-    var lastModified: Date
+    var id: UUID = UUID()
+    var displayName: String = ""
+    var role: MemberRole = MemberRole.family
+    var isProxy: Bool = false
+    var grantedCategories: [PermissionCategory] = []
+    var joinedAt: Date = Date()
+    var lastModified: Date = Date()
+    var iCloudRecordID: String = ""
     var circle: CareCircle?
 
     init(displayName: String, role: MemberRole, circle: CareCircle? = nil) {

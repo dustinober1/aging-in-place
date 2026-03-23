@@ -27,7 +27,7 @@ final class PersistenceTests: XCTestCase {
     func testInsertCareCircleAndMember_saveThenFetch_persists() throws {
         let circle = CareCircle(seniorName: "Margaret", seniorDeviceID: "device-001")
         let member = CareTeamMember(displayName: "Sarah", role: .family, circle: circle)
-        circle.members.append(member)
+        circle.members?.append(member)
 
         context.insert(circle)
         context.insert(member)
@@ -38,8 +38,8 @@ final class PersistenceTests: XCTestCase {
         let fetched = try context.fetch(descriptor)
         XCTAssertEqual(fetched.count, 1)
         XCTAssertEqual(fetched.first?.seniorName, "Margaret")
-        XCTAssertEqual(fetched.first?.members.count, 1)
-        XCTAssertEqual(fetched.first?.members.first?.displayName, "Sarah")
+        XCTAssertEqual(fetched.first?.members?.count, 1)
+        XCTAssertEqual(fetched.first?.members?.first?.displayName, "Sarah")
     }
 
     // MARK: - CareRecord with encryptedPayload saves and loads ciphertext intact
@@ -70,7 +70,7 @@ final class PersistenceTests: XCTestCase {
         let circle = CareCircle(seniorName: "Harold")
         let member1 = CareTeamMember(displayName: "Jane", role: .nurse, circle: circle)
         let member2 = CareTeamMember(displayName: "Bob", role: .paidAide, circle: circle)
-        circle.members.append(contentsOf: [member1, member2])
+        circle.members?.append(contentsOf: [member1, member2])
 
         context.insert(circle)
         context.insert(member1)

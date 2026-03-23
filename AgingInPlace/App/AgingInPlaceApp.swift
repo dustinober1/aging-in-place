@@ -6,15 +6,12 @@ struct AgingInPlaceApp: App {
 
     let container: ModelContainer = {
         do {
-            // cloudKitDatabase: .automatic requires all model attributes to be optional
-            // or have defaults. Kept as .none until models are made CloudKit-compatible.
-            // Change to .automatic when model attributes are updated.
             let config = ModelConfiguration(
                 isStoredInMemoryOnly: false,
-                cloudKitDatabase: .none
+                cloudKitDatabase: .automatic
             )
             return try ModelContainer(
-                for: Schema(AgingInPlaceSchemaV3.models),
+                for: Schema(AgingInPlaceSchemaV4.models),
                 migrationPlan: AgingInPlaceMigrationPlan.self,
                 configurations: config
             )
@@ -25,7 +22,7 @@ struct AgingInPlaceApp: App {
                     cloudKitDatabase: .none
                 )
                 return try ModelContainer(
-                    for: Schema(AgingInPlaceSchemaV3.models),
+                    for: Schema(AgingInPlaceSchemaV4.models),
                     configurations: fallback
                 )
             } catch {

@@ -93,7 +93,7 @@ struct PendingRequestView: View {
     let ctx = ModelContext(container)
     let circle = CareCircle(seniorName: "Margaret")
     let member = CareTeamMember(displayName: "Sarah Johnson", role: .family, circle: circle)
-    circle.members.append(member)
+    circle.members?.append(member)
     ctx.insert(circle)
     ctx.insert(member)
     try? ctx.save()

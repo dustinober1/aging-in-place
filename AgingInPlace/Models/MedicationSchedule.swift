@@ -3,19 +3,19 @@ import SwiftData
 
 @Model
 final class MedicationSchedule {
-    var id: UUID
+    var id: UUID = UUID()
     /// Drug name stored unencrypted — used in notification titles and predicate filtering
-    var drugName: String
+    var drugName: String = ""
     /// Dose stored unencrypted — used in notification body
-    var dose: String
-    var scheduledHour: Int
-    var scheduledMinute: Int
+    var dose: String = ""
+    var scheduledHour: Int = 0
+    var scheduledMinute: Int = 0
     /// Minutes after scheduled time before a missed-dose alert fires. Default: 30.
-    var missedWindowMinutes: Int
-    var isActive: Bool
-    var createdByMemberID: UUID
-    var createdAt: Date
-    var lastModified: Date
+    var missedWindowMinutes: Int = 30
+    var isActive: Bool = true
+    var createdByMemberID: UUID = UUID()
+    var createdAt: Date = Date()
+    var lastModified: Date = Date()
 
     init(
         drugName: String,

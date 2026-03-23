@@ -3,16 +3,16 @@ import SwiftData
 
 @Model
 final class MedicationLog {
-    var id: UUID
+    var id: UUID = UUID()
     /// Optional link to MedicationSchedule.id if this was a scheduled dose
     var scheduleID: UUID?
     /// AES-GCM sealed JSON: { drugName, dose, notes }
-    var encryptedPayload: Data
+    var encryptedPayload: Data = Data()
     /// Not encrypted — needed for predicate-based date sorting and filtering
-    var administeredAt: Date
-    var authorMemberID: UUID
-    var createdAt: Date
-    var lastModified: Date
+    var administeredAt: Date = Date()
+    var authorMemberID: UUID = UUID()
+    var createdAt: Date = Date()
+    var lastModified: Date = Date()
 
     init(
         scheduleID: UUID? = nil,

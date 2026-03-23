@@ -3,18 +3,18 @@ import SwiftData
 
 @Model
 final class CalendarEvent {
-    var id: UUID
+    var id: UUID = UUID()
     /// Event title stored unencrypted — used in notification content
-    var title: String
+    var title: String = ""
     /// Not encrypted — needed for notification trigger calculation and predicate filtering
-    var eventDate: Date
+    var eventDate: Date = Date()
     /// Minutes before event to send reminder notification. Default: 60.
-    var reminderOffsetMinutes: Int
+    var reminderOffsetMinutes: Int = 60
     /// AES-GCM sealed JSON: { location, notes, attendees }
-    var encryptedPayload: Data
-    var createdByMemberID: UUID
-    var createdAt: Date
-    var lastModified: Date
+    var encryptedPayload: Data = Data()
+    var createdByMemberID: UUID = UUID()
+    var createdAt: Date = Date()
+    var lastModified: Date = Date()
 
     init(
         title: String,

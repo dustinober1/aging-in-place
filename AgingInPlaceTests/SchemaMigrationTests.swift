@@ -9,7 +9,7 @@ final class SchemaMigrationTests: XCTestCase {
     private func makeContainer() throws -> ModelContainer {
         let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
         return try ModelContainer(
-            for: Schema(AgingInPlaceSchemaV3.models),
+            for: Schema(AgingInPlaceSchemaV4.models),
             migrationPlan: AgingInPlaceMigrationPlan.self,
             configurations: [config]
         )

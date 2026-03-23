@@ -32,23 +32,23 @@ final class CareTeamTests: XCTestCase {
 
     func testAddMemberToCareCircle_persistsCorrectly() throws {
         let member = CareTeamMember(displayName: "Sarah", role: .family, circle: circle)
-        circle.members.append(member)
+        circle.members?.append(member)
         context.insert(member)
         try context.save()
 
         // Fetch and verify
         let circles = try context.fetch(FetchDescriptor<CareCircle>())
         XCTAssertEqual(circles.count, 1)
-        XCTAssertEqual(circles.first?.members.count, 1)
-        XCTAssertEqual(circles.first?.members.first?.displayName, "Sarah")
-        XCTAssertEqual(circles.first?.members.first?.role, .family)
+        XCTAssertEqual(circles.first?.members?.count, 1)
+        XCTAssertEqual(circles.first?.members?.first?.displayName, "Sarah")
+        XCTAssertEqual(circles.first?.members?.first?.role, .family)
     }
 
     // MARK: - Remove member cascades from SwiftData
 
     func testRemoveMember_deletesFromSwiftData() throws {
         let member = CareTeamMember(displayName: "Maria", role: .paidAide, circle: circle)
-        circle.members.append(member)
+        circle.members?.append(member)
         context.insert(member)
         try context.save()
 
@@ -71,7 +71,7 @@ final class CareTeamTests: XCTestCase {
         let sarah = CareTeamMember(displayName: "Sarah", role: .family, circle: circle)
         let maria = CareTeamMember(displayName: "Maria", role: .paidAide, circle: circle)
         let nurse = CareTeamMember(displayName: "Dr. Smith", role: .nurse, circle: circle)
-        circle.members.append(contentsOf: [sarah, maria, nurse])
+        circle.members?.append(contentsOf: [sarah, maria, nurse])
         context.insert(sarah)
         context.insert(maria)
         context.insert(nurse)

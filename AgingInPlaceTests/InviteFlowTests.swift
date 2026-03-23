@@ -33,7 +33,7 @@ final class InviteFlowTests: XCTestCase {
     func testCreateInvite_insertsInviteCodeWithIsUsedFalse() throws {
         let code = InviteCodeGenerator.generate()
         let invite = InviteCode(code: code, circle: circle)
-        circle.pendingInvites.append(invite)
+        circle.pendingInvites?.append(invite)
         context.insert(invite)
         try context.save()
 
@@ -42,7 +42,7 @@ final class InviteFlowTests: XCTestCase {
         XCTAssertEqual(fetched.count, 1)
         XCTAssertEqual(fetched.first?.code, code)
         XCTAssertFalse(fetched.first?.isUsed ?? true, "Newly created invite code should have isUsed=false")
-        XCTAssertEqual(circle.pendingInvites.count, 1)
+        XCTAssertEqual(circle.pendingInvites?.count, 1)
     }
 
     // MARK: - Accept invite
@@ -50,7 +50,7 @@ final class InviteFlowTests: XCTestCase {
     func testAcceptInvite_createsTeamMemberAndMarksCodeUsed() throws {
         let code = InviteCodeGenerator.generate()
         let invite = InviteCode(code: code, circle: circle)
-        circle.pendingInvites.append(invite)
+        circle.pendingInvites?.append(invite)
         context.insert(invite)
         try context.save()
 
@@ -61,7 +61,7 @@ final class InviteFlowTests: XCTestCase {
         XCTAssertFalse(foundInvite.isUsed, "Invite should not be used yet")
 
         let member = CareTeamMember(displayName: "Sarah", role: .family, circle: circle)
-        circle.members.append(member)
+        circle.members?.append(member)
         context.insert(member)
         foundInvite.isUsed = true
         try context.save()
@@ -83,7 +83,7 @@ final class InviteFlowTests: XCTestCase {
         let code = InviteCodeGenerator.generate()
         let invite = InviteCode(code: code, circle: circle)
         invite.isUsed = true  // Already used
-        circle.pendingInvites.append(invite)
+        circle.pendingInvites?.append(invite)
         context.insert(invite)
         try context.save()
 

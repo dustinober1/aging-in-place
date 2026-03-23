@@ -153,7 +153,7 @@ struct CareTeamListView: View {
     let circle = CareCircle(seniorName: "Margaret")
     let sarah = CareTeamMember(displayName: "Sarah", role: .family, circle: circle)
     let maria = CareTeamMember(displayName: "Maria", role: .paidAide, circle: circle)
-    circle.members.append(contentsOf: [sarah, maria])
+    circle.members?.append(contentsOf: [sarah, maria])
     ctx.insert(circle)
     ctx.insert(sarah)
     ctx.insert(maria)

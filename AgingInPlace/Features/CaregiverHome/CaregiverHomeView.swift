@@ -232,7 +232,7 @@ private struct QuickActionLabel: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     let container = try! ModelContainer(
-        for: Schema(AgingInPlaceSchemaV3.models),
+        for: Schema(AgingInPlaceSchemaV4.models),
         migrationPlan: AgingInPlaceMigrationPlan.self,
         configurations: [config]
     )
