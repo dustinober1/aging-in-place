@@ -167,9 +167,9 @@ struct SeniorHomeView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     let container = try! ModelContainer(
-        for: Schema(AgingInPlaceSchemaV2.models),
+        for: Schema(AgingInPlaceSchemaV3.models),
         migrationPlan: AgingInPlaceMigrationPlan.self,
         configurations: [config]
     )
