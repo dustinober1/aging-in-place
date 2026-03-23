@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0711CDC70EB6E7B277AE15EF /* SeniorHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127AEAE9EA3E088F0BEC016 /* SeniorHomeTests.swift */; };
+		15597890E590CB5B87C69245 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB176F4114F995F283384DA /* SharingService.swift */; };
 		1BEDBF0A177D81F1783ECB56 /* MedicationSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EDBE9F062F3CEBBC1608B /* MedicationSchedule.swift */; };
 		1CEB152234841D303535A526 /* CareHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8694989AF7C8C2AA5B596BE /* CareHistoryRow.swift */; };
 		1E2AEC21C9D522F586691091 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04507C1D992941B4FBE32483 /* NotificationPermissionView.swift */; };
@@ -60,6 +61,7 @@
 		C6389B26B56AD3BAE2079972 /* PendingRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FFCA2617E42F04C69EDEB9 /* PendingRequestView.swift */; };
 		C8D2F2849053FA5AE611FE86 /* AgingInPlaceMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A9E94861FDB247DF401945 /* AgingInPlaceMigrationPlan.swift */; };
 		CC896367A4BBA3DC0EF0DE1D /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA293DD808AA44CAF9BEC767 /* EmergencyContact.swift */; };
+		CD69E3811CAF5D712DC75349 /* SharingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D447E71CA6E122D164562 /* SharingServiceTests.swift */; };
 		D244BBEFDE50805D4730243A /* CareHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019AEAF2E52E74EF0CF11FD5 /* CareHistoryTests.swift */; };
 		D67F6E1CC1A2390D128424C0 /* SchemaMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CD3A7E97DCEF9976028A54 /* SchemaMigrationTests.swift */; };
 		D780DB97D08E8FD96166991C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD509FECF0C9994605B87B54 /* PersistenceTests.swift */; };
@@ -101,10 +103,12 @@
 		208D8F669B4216254C61245F /* LogCareVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCareVisitView.swift; sourceTree = "<group>"; };
 		2151463B0626126A11E5BB30 /* MedicationScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationScheduleView.swift; sourceTree = "<group>"; };
 		27C2E2A60A4BA62EE45EDDB8 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
+		2AB176F4114F995F283384DA /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
 		2BA963BC78C10FB91321A29B /* CareCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareCircle.swift; sourceTree = "<group>"; };
 		2E9ACA07B422C9B78548CED6 /* PermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTests.swift; sourceTree = "<group>"; };
 		332EBBB2BABB96A7DFC64F29 /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
 		3CB580D63AF58791763E6438 /* CareHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareHistoryView.swift; sourceTree = "<group>"; };
+		414D447E71CA6E122D164562 /* SharingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceTests.swift; sourceTree = "<group>"; };
 		421468401283329728812CF5 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		4BC6042CF3528B6C701A9A37 /* PermissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCategory.swift; sourceTree = "<group>"; };
 		4D62090ED971FC1A9FEBF265 /* EmergencyContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactListView.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				06CD3A7E97DCEF9976028A54 /* SchemaMigrationTests.swift */,
 				756BC85B77D674BC133B64AF /* SchemaV3MigrationTests.swift */,
 				7127AEAE9EA3E088F0BEC016 /* SeniorHomeTests.swift */,
+				414D447E71CA6E122D164562 /* SharingServiceTests.swift */,
 			);
 			path = AgingInPlaceTests;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			children = (
 				19C9CB1DCB952F67070C8A9F /* CloudKitAvailability.swift */,
 				745186E6251D7426DC4B4697 /* CloudKitSyncMonitor.swift */,
+				2AB176F4114F995F283384DA /* SharingService.swift */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				D67F6E1CC1A2390D128424C0 /* SchemaMigrationTests.swift in Sources */,
 				E94C042D07B0295587A3D027 /* SchemaV3MigrationTests.swift in Sources */,
 				0711CDC70EB6E7B277AE15EF /* SeniorHomeTests.swift in Sources */,
+				CD69E3811CAF5D712DC75349 /* SharingServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +558,7 @@
 				9E0B2EC5BA90A0B0BF49EB0E /* PermissionToggleRow.swift in Sources */,
 				5D7F2B3628C0BBCA075BEB5D /* RootView.swift in Sources */,
 				36A98DA23EA93CDC11B53B99 /* SeniorHomeView.swift in Sources */,
+				15597890E590CB5B87C69245 /* SharingService.swift in Sources */,
 				EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
