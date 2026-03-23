@@ -13,7 +13,18 @@ struct AgingInPlaceApp: App {
                 configurations: config
             )
         } catch {
-            fatalError("Failed to create ModelContainer: \(error)")
+            do {
+                let fallback = ModelConfiguration(
+                    isStoredInMemoryOnly: true,
+                    cloudKitDatabase: .none
+                )
+                return try ModelContainer(
+                    for: Schema(AgingInPlaceSchemaV3.models),
+                    configurations: fallback
+                )
+            } catch {
+                fatalError("Failed to create ModelContainer: \(error)")
+            }
         }
     }()
 
