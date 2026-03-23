@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0711CDC70EB6E7B277AE15EF /* SeniorHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127AEAE9EA3E088F0BEC016 /* SeniorHomeTests.swift */; };
+		13D0A4E089BA85EC3647AAD1 /* SyncStatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0103E5A1CC47C2F3EEEDDA /* SyncStatusBanner.swift */; };
 		15597890E590CB5B87C69245 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB176F4114F995F283384DA /* SharingService.swift */; };
 		1BEDBF0A177D81F1783ECB56 /* MedicationSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EDBE9F062F3CEBBC1608B /* MedicationSchedule.swift */; };
 		1CEB152234841D303535A526 /* CareHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8694989AF7C8C2AA5B596BE /* CareHistoryRow.swift */; };
@@ -120,6 +121,7 @@
 		5C4745404BD7FD786ECC4C8D /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
 		638D965AC808C23FC0399887 /* MedicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTests.swift; sourceTree = "<group>"; };
 		65FFCA2617E42F04C69EDEB9 /* PendingRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingRequestView.swift; sourceTree = "<group>"; };
+		6D0103E5A1CC47C2F3EEEDDA /* SyncStatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusBanner.swift; sourceTree = "<group>"; };
 		6DB2EC922046998207E94938 /* CaregiverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiverHomeView.swift; sourceTree = "<group>"; };
 		7127AEAE9EA3E088F0BEC016 /* SeniorHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorHomeTests.swift; sourceTree = "<group>"; };
 		727C49F834435713A8286556 /* MoodPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				19C9CB1DCB952F67070C8A9F /* CloudKitAvailability.swift */,
 				745186E6251D7426DC4B4697 /* CloudKitSyncMonitor.swift */,
 				2AB176F4114F995F283384DA /* SharingService.swift */,
+				6D0103E5A1CC47C2F3EEEDDA /* SyncStatusBanner.swift */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				36A98DA23EA93CDC11B53B99 /* SeniorHomeView.swift in Sources */,
 				15597890E590CB5B87C69245 /* SharingService.swift in Sources */,
 				EDBEF9C153CDE54E38AB5992 /* SummaryCardView.swift in Sources */,
+				13D0A4E089BA85EC3647AAD1 /* SyncStatusBanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

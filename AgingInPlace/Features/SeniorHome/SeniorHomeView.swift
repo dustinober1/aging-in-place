@@ -62,6 +62,7 @@ struct SeniorHomeView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     greetingHeader
+                    SyncStatusBanner()
                     cardList
                 }
                 .padding(.horizontal, 16)

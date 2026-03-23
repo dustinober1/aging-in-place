@@ -33,6 +33,7 @@ struct CaregiverHomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     greetingHeader
+                    SyncStatusBanner()
                     recentActivitySection
                     quickActionsSection
                 }
