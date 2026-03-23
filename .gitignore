@@ -11,6 +11,7 @@
 .gsd/DISCUSSION-MANIFEST.json
 .gsd/milestones/**/*-CONTINUE.md
 .gsd/milestones/**/continue.md
+.worktrees/
 .DS_Store
 Thumbs.db
 *.swp
